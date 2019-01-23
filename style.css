@@ -242,7 +242,6 @@ h6 {
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
-	letter-spacing: -.015em;
 }
 
 h1 {
@@ -1779,7 +1778,7 @@ p.entry-meta {
 }
 
 .site-inner.front-page .widget-area {
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
 .site-inner.front-page .widget-area:nth-child(odd) {
@@ -1788,4 +1787,60 @@ p.entry-meta {
 
 .site-inner.front-page .widget:last-child {
     margin-bottom: 0;
+}
+
+/* Front page styles
+---------------------------------------------------------------------------------------------------- */
+
+.front-page-1 {
+  background-image: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.front-page-1 h1 {
+  font-size: 4rem;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.front-page-2 .widget-2 {
+    background-image: url(./images/two.svg),linear-gradient(60deg,#050a14 0,#062456 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #fff;
+}
+
+.front-page-3 {
+  background-color: #f5f7f9;
+}
+
+.front-page-4 {
+  background: url(./images/three.svg),radial-gradient(ellipse at top right,#1cafc6,#012690);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.front-page-5 .widget-4 {
+  background-image: url(./images/two.svg),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 960px) {
+
+.front-page-1 .widget-wrap {
+  padding-right: 40%;
+}
 }
