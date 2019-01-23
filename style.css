@@ -689,9 +689,11 @@ th:first-child {
 }
 
 .widget-title {
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 500;
 	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 /* WordPress
@@ -1782,7 +1784,7 @@ p.entry-meta {
 }
 
 .site-inner.front-page .widget-area:nth-child(odd) {
-    background-color: rgba(0,0,0,.03);
+    background-color: #f5f7f9;
 }
 
 .site-inner.front-page .widget:last-child {
@@ -1793,11 +1795,11 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
 
 .front-page-1 {
-  background-image: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
+  background: url(./images/map.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #333;
 }
 
 .front-page-1 h1 {
@@ -1806,35 +1808,11 @@ p.entry-meta {
   font-weight: 700;
 }
 
-.front-page-2 .widget-2 {
-    background-image: url(./images/two.svg),linear-gradient(60deg,#050a14 0,#062456 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #fff;
-}
-
-.front-page-3 {
-  background-color: #f5f7f9;
-}
-
 .front-page-4 {
-  background: url(./images/three.svg),radial-gradient(ellipse at top right,#1cafc6,#012690);
+  background: url(./images/print.svg),radial-gradient(ellipse at top right,#1cafc6,#012690);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
-}
-
-.front-page-5 .widget-4 {
-  background-image: url(./images/two.svg),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
-  padding-top: 40px;
-  padding-bottom: 40px;
   color: #fff;
 }
 
