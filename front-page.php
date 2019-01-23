@@ -32,7 +32,7 @@ function be_site_inner_attr( $attributes ) {
 get_header();
 
 // Displays front-page widget areas.
-for ( $i = 1; $i <= 4; $i++ ) {
+for ( $i = 1; $i <= 5; $i++ ) {
     genesis_widget_area( "front-page-{$i}", array(
         'before' => '<div class="front-page-' . $i . ' flexible-widgets widget-area"><div class="wrap">',
         'after'  => '</div></div>',

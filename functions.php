@@ -254,7 +254,7 @@ function genesis_sample_comments_gravatar( $args ) {
 }
 
 // Registers front-page widget areas.
-for ( $i = 1; $i <= 4; $i++ ) {
+for ( $i = 1; $i <= 5; $i++ ) {
     genesis_register_widget_area(
         array(
             'id'          => "front-page-{$i}",
