@@ -1760,3 +1760,125 @@ p.entry-meta {
 	}
 
 }
+
+/* Blog grid */
+
+.content-archive .content {
+    float: none;
+}
+
+.articles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    display: -ms-grid;
+    display: grid;
+
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-archive .content .entry {
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+
+    width: 31.25%; /* http://d.pr/i/sVsJRM */
+    margin-bottom: 3.125%;
+}
+
+.content-archive .content .entry:last-child {
+    margin-right: auto;
+    margin-left: 3.125%;
+}
+
+@supports ((display: -ms-grid) or (display: grid)) {
+    .content-archive .content .entry {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .content-archive .content .entry:last-child {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.content-archive .content .entry-content {
+    padding: 20px;
+}
+
+.content-archive .content a.entry-image-link img {
+    margin-bottom: 0;
+    vertical-align: top;
+}
+
+.content-archive .content .entry-title {
+    font-size: 18px;
+}
+
+.content-archive .content p.entry-meta {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.content-archive .content .entry-meta a {
+    color: #333;
+    text-decoration: none;
+}
+
+.content-archive .content .entry-meta a:hover {
+    color: #c3251d;
+}
+
+@media only screen and (max-width: 1023px) {
+    .articles {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-archive .content .entry {
+        width: 47.5%; /* http://d.pr/i/zHWeyP */
+        margin-bottom: 5%;
+    }
+
+    .content-archive .content .entry:last-child {
+        margin-left: 5%;
+    }
+
+    @supports ((display: -ms-grid) or (display: grid)) {
+        .content-archive .content .entry {
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        .content-archive .content .entry:last-child {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .articles {
+        flex-direction: column;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .content-archive .content .entry {
+        width: 100%; /* http://d.pr/i/zHWeyP */
+    }
+
+    .content-archive .content .entry:last-child {
+        margin-left: 0;
+    }
+}
