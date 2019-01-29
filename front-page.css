@@ -1,0 +1,26 @@
+/* Front Page with front-page-Width Sections
+-------------------------------------------- */
+
+.site-inner.front-page {
+    max-width: none;
+    padding: 0;
+}
+
+.site-inner.front-page .wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.site-inner.front-page .widget-area {
+    padding: 50px 0;
+}
+
+.site-inner.front-page .widget-area:nth-child(odd) {
+    background-color: rgba(0,0,0,.03);
+}
+
+.site-inner.front-page .widget:last-child {
+    margin-bottom: 0;
+}

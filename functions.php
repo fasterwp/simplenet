@@ -259,3 +259,14 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+// Registers front-page widget areas.
+for ( $i = 1; $i <= 5; $i++ ) {
+    genesis_register_widget_area(
+        array(
+            'id'          => "front-page-{$i}",
+            'name'        => __( "Front Page {$i}", 'genesis-sample' ),
+            'description' => __( "This is the front page {$i} section.", 'genesis-sample' ),
+        )
+    );
+}
