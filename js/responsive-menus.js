@@ -5,7 +5,7 @@
  *
  * @author StudioPress
  * @link https://github.com/copyblogger/responsive-menus/
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @package GenesisSample
  */
 
@@ -99,8 +99,8 @@
 			return;
 		}
 
-		var menuIconClass    = typeof genesisMenuParams.menuIconClass !== 'undefined' ? genesisMenuParams.menuIconClass : 'ionicons-before ion-navicon';
-		var	subMenuIconClass = typeof genesisMenuParams.subMenuIconClass !== 'undefined' ? genesisMenuParams.subMenuIconClass : 'ionicons-before ion-ios-arrow-down';
+		var menuIconClass    = typeof genesisMenuParams.menuIconClass !== 'undefined' ? genesisMenuParams.menuIconClass : 'dashicons-before dashicons-menu';
+		var	subMenuIconClass = typeof genesisMenuParams.subMenuIconClass !== 'undefined' ? genesisMenuParams.subMenuIconClass : 'dashicons-before dashicons-arrow-down-alt2';
 		var	toggleButtons    = {
 			menu : $( '<button />', {
 					'class' : mainMenuButtonClass,

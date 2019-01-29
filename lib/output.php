@@ -6,7 +6,7 @@
  *
  * @package Genesis Sample
  * @author  StudioPress
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
 
@@ -29,32 +29,12 @@ function genesis_sample_css() {
 		$logo_height           = absint( $logo[2] );
 		$logo_max_width        = get_theme_mod( 'genesis_sample_logo_width', 350 );
 		$logo_width            = absint( $logo[1] );
-		$logo_ratio            = $logo_width / $logo_height;
-		$logo_effective_height = min( $logo_width, $logo_max_width ) / $logo_ratio;
+		$logo_ratio            = $logo_width / max( $logo_height, 1 );
+		$logo_effective_height = min( $logo_width, $logo_max_width ) / max( $logo_ratio, 1 );
 		$logo_padding          = max( 0, ( 60 - $logo_effective_height ) / 2 );
 	}
 
 	$css = '';
-
-	$opts = apply_filters( 'monochrome_images', array( '1', '4' ) );
-
-	$settings = array();
-
-	foreach( $opts as $opt ) {
-		$settings[$opt]['image'] = preg_replace( '/^https?:/', '', get_option( $opt .'-monochrome-image', sprintf( '%s/images/bg-%s.jpg', get_stylesheet_directory_uri(), $opt ) ) );
-	}
-
-	$css = '';
-
-	foreach ( $settings as $section => $value ) {
-
-		$background = $value['image'] ? sprintf( 'background-image: url(%s);', $value['image'] ) : '';
-
-		if ( is_front_page() ) {
-			$css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s { %s }', $section, $background ) : '';
-		}
-
-	}
 
 	$css .= ( genesis_sample_customizer_get_default_link_color() !== $color_link ) ? sprintf(
 		'
@@ -74,7 +54,8 @@ function genesis_sample_css() {
 			color: %s;
 		}
 
-		', $color_link
+		',
+		$color_link
 	) : '';
 
 	$css .= ( genesis_sample_customizer_get_default_accent_color() !== $color_accent ) ? sprintf(
@@ -93,14 +74,22 @@ function genesis_sample_css() {
 		input[type="submit"]:focus,
 		input[type="submit"]:hover,
 		.button:focus,
-		.button:hover,
-		.genesis-nav-menu > .menu-highlight > a:hover,
-		.genesis-nav-menu > .menu-highlight > a:focus,
-		.genesis-nav-menu > .menu-highlight.current-menu-item > a {
-			background-color: %s;
-			color: %s;
+		.button:hover {
+			background-color: %1$s;
+			color: %2$s;
 		}
-		', $color_accent, genesis_sample_color_contrast( $color_accent )
+
+		@media only screen and (min-width: 960px) {
+			.genesis-nav-menu > .menu-highlight > a:hover,
+			.genesis-nav-menu > .menu-highlight > a:focus,
+			.genesis-nav-menu > .menu-highlight.current-menu-item > a {
+				background-color: %1$s;
+				color: %2$s;
+			}
+		}
+		',
+		$color_accent,
+		genesis_sample_color_contrast( $color_accent )
 	) : '';
 
 	$css .= ( has_custom_logo() && ( 200 <= $logo_effective_height ) ) ?
@@ -116,7 +105,8 @@ function genesis_sample_css() {
 		.wp-custom-logo .site-container .title-area {
 			max-width: %spx;
 		}
-		', $logo_max_width
+		',
+		$logo_max_width
 	) : '';
 
 	// Place menu below logo and center logo once it gets big.
@@ -145,12 +135,13 @@ function genesis_sample_css() {
 		'
 	: '';
 
-	$css .= ( has_custom_logo() && $logo_padding ) ? sprintf(
+	$css .= ( has_custom_logo() && $logo_padding && ( 1 < $logo_effective_height ) ) ? sprintf(
 		'
 		.wp-custom-logo .title-area {
 			padding-top: %spx;
 		}
-		', $logo_padding + 5
+		',
+		$logo_padding + 5
 	) : '';
 
 	if ( $css ) {

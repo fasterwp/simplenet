@@ -6,12 +6,17 @@
  *
  * @package Genesis Sample
  * @author  StudioPress
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
 
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
+
+// Defines the child theme (do not remove).
+define( 'CHILD_THEME_NAME', 'Genesis Sample' );
+define( 'CHILD_THEME_URL', 'https://www.studiopress.com/' );
+define( 'CHILD_THEME_VERSION', '2.8.0' );
 
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
@@ -46,10 +51,15 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 // Adds the Genesis Connect WooCommerce notice.
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
-// Defines the child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'MASA Theme' );
-define( 'CHILD_THEME_URL', 'https://github.com/fasterwp/masa' );
-define( 'CHILD_THEME_VERSION', '2.6.4' );
+add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
+/**
+ * Adds Gutenberg opt-in features and styling.
+ *
+ * @since 2.7.0
+ */
+function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound -- using same in all child themes to allow action to be unhooked.
+	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
+}
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
@@ -60,11 +70,13 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 function genesis_sample_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
-    'ionicons',
-		get_stylesheet_directory_uri() . "/ionicons.css",
-    array(),
-    CHILD_THEME_VERSION
-);
+		'genesis-sample-fonts',
+		'//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
+		array(),
+		CHILD_THEME_VERSION
+	);
+
+	wp_enqueue_style( 'dashicons' );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
@@ -74,6 +86,7 @@ function genesis_sample_enqueue_scripts_styles() {
 		CHILD_THEME_VERSION,
 		true
 	);
+
 	wp_localize_script(
 		'genesis-sample-responsive-menu',
 		'genesis_responsive_menu',
@@ -99,9 +112,9 @@ function genesis_sample_responsive_menu_settings() {
 
 	$settings = array(
 		'mainMenu'         => __( 'Menu', 'genesis-sample' ),
-		'menuIconClass'    => 'ionicons-before ion-navicon',
+		'menuIconClass'    => 'dashicons-before dashicons-menu',
 		'subMenu'          => __( 'Submenu', 'genesis-sample' ),
-		'subMenuIconClass' => 'ionicons-before ion-ios-arrow-down',
+		'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
 		'menuClasses'      => array(
 			'combine' => array(
 				'.nav-primary',
@@ -114,61 +127,23 @@ function genesis_sample_responsive_menu_settings() {
 
 }
 
-// Sets the content width based on the theme's design and stylesheet.
-if ( ! isset( $content_width ) ) {
-	$content_width = 702; // Pixels.
-}
-
 // Adds support for HTML5 markup structure.
-add_theme_support(
-	'html5', array(
-		'caption',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'search-form',
-	)
-);
+add_theme_support( 'html5', genesis_get_config( 'html5' ) );
 
 // Adds support for accessibility.
-add_theme_support(
-	'genesis-accessibility', array(
-		'404-page',
-		'drop-down-menu',
-		'headings',
-		'rems',
-		'search-form',
-		'skip-links',
-	)
-);
-
-// Enable theme support for Gutenberg wide images.
-add_theme_support( 'gutenberg', array(
-	'wide-images' => true,
-) );
+add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
 
 // Adds viewport meta tag for mobile browsers.
-add_theme_support(
-	'genesis-responsive-viewport'
-);
+add_theme_support( 'genesis-responsive-viewport' );
 
 // Adds custom logo in Customizer > Site Identity.
-add_theme_support(
-	'custom-logo', array(
-		'height'      => 120,
-		'width'       => 700,
-		'flex-height' => true,
-		'flex-width'  => true,
-	)
-);
+add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
 
 // Renames primary and secondary navigation menus.
-add_theme_support(
-	'genesis-menus', array(
-		'primary'   => __( 'Header Menu', 'genesis-sample' ),
-		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
-	)
-);
+add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
+
+// Adds image sizes.
+add_image_size( 'sidebar-featured', 75, 75, true );
 
 // Adds support for after entry widget.
 add_theme_support( 'genesis-after-entry-widget-area' );
@@ -182,7 +157,7 @@ unregister_sidebar( 'header-right' );
 // Removes secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
 
-// Removes 3-col site layouts.
+// Removes site layouts.
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
@@ -208,7 +183,7 @@ function genesis_sample_remove_metaboxes( $_genesis_admin_settings ) {
 
 add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_remove_customizer_settings' );
 /**
- * Removes output of header settings in the Customizer.
+ * Removes output of header and front page breadcrumb settings in the Customizer.
  *
  * @since 2.6.0
  *
@@ -218,6 +193,7 @@ add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_remove_c
 function genesis_sample_remove_customizer_settings( $config ) {
 
 	unset( $config['genesis']['sections']['genesis_header'] );
+	unset( $config['genesis']['sections']['genesis_breadcrumbs']['controls']['breadcrumb_front_page'] );
 	return $config;
 
 }
@@ -282,185 +258,4 @@ function genesis_sample_comments_gravatar( $args ) {
 	$args['avatar_size'] = 60;
 	return $args;
 
-}
-// Register front-page widget areas
-for ( $i = 1; $i <= 5; $i++ ) {
-	genesis_register_widget_area(
-		array(
-			'id'          => "front-page-{$i}",
-			'name'        => __( "Front Page {$i}", 'genesis-sample' ),
-			'description' => __( "This is the front page {$i} section.", 'genesis-sample' ),
-		)
-	);
-}
-
-// Enable shortcodes in text widgets
-add_filter('widget_text','do_shortcode');
-
-/**
- * Add "first" and "last" CSS classes to dynamic sidebar widgets. Also adds numeric index class for each widget (widget-1, widget-2, etc.)
- */
- function widget_first_last_classes( $params ) {
-
-		global $my_widget_num; // Global a counter array
-		$this_id = $params[0]['id']; // Get the id for the current sidebar we're processing
-		$arr_registered_widgets = wp_get_sidebars_widgets(); // Get an array of ALL registered widgets
-
-		if( !$my_widget_num ) {// If the counter array doesn't exist, create it
-			$my_widget_num = array();
-		}
-
-		// if( !isset( $arr_registered_widgets[$this_id] ) || !is_array( $arr_registered_widgets[$this_id] ) ) { // Check if the current sidebar has no widgets
-			// return $params; // No widgets in this sidebar... bail early.
-		// }
-
-		if( isset( $my_widget_num[$this_id] ) ) { // See if the counter array has an entry for this sidebar
-			$my_widget_num[$this_id] ++;
-		} else { // If not, create it starting with 1
-			$my_widget_num[$this_id] = 1;
-		}
-
-		$class = 'class="widget-' . $my_widget_num[$this_id] . ' '; // Add a widget number class for additional styling options
-
-		if( $my_widget_num[$this_id] == 1 ) { // If this is the first widget
-			$class .= 'widget-first ';
-		} elseif( $my_widget_num[$this_id] == count( $arr_registered_widgets[$this_id] ) ) { // If this is the last widget
-			$class .= 'widget-last ';
-		}
-
-		// $params[0]['before_widget'] = str_replace( 'class="', $class, $params[0]['before_widget'] ); // Insert our new classes into "before widget"
-		$params[0]['before_widget'] = preg_replace('/class=\"/', "$class", $params[0]['before_widget'], 1); // Insert our new classes into "before widget"
-
-		return $params;
-
-	}
-	add_filter( 'dynamic_sidebar_params', 'widget_first_last_classes' );
-
-	add_filter( 'get_the_content_more_link', 'button_read_more_link' );
-	function button_read_more_link() {
-	return '<p><a class="button secondary" href="' . get_permalink() . '">Read more</a></p>';
-	}
-
-// Setup widget counts.
-function masa_count_widgets( $id ) {
-
-	$sidebars_widgets = wp_get_sidebars_widgets();
-
-	if ( isset( $sidebars_widgets[ $id ] ) ) {
-		return count( $sidebars_widgets[ $id ] );
-	}
-
-}
-
-// Calculate widget count.
-function masa_widget_area_class( $id ) {
-
-	$count = masa_count_widgets( $id );
-
-	$class = '';
-
-	if ( $count == 1 ) {
-		$class .= ' widget-full';
-	} elseif ( $count % 3 == 1 ) {
-		$class .= ' widget-thirds';
-	} elseif ( $count % 4 == 1 ) {
-		$class .= ' widget-fourths';
-	} elseif ( $count % 2 == 0 ) {
-		$class .= ' widget-halves uneven';
-	} else {
-		$class .= ' widget-halves';
-	}
-
-	return $class;
-
-}
-// Add single post navigation.
-add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
-
-// Register shop sidebar widget area.
-genesis_register_sidebar( array(
-	'id'          => 'shop-sidebar',
-	'name'        => __( 'Shop Sidebar', 'genesis-sample' ),
-	'description' => __( 'This is the shop sidebar widget area if you are using a two column site layout option for your product archive.', 'genesis-sample' ),
-) );
-
-/**
- * Display shop sidebar widget area.
- */
-function sp_shop_widget_area() {
-
-	if ( class_exists( 'WooCommerce' ) && is_woocommerce() ) {
-
-		genesis_widget_area( 'shop-sidebar', array(
-		    'before' => '<div class="shop-sidebar">',
-		    'after'  => '</div>',
-		) );
-	}
-}
-add_action( 'genesis_before_sidebar_widget_area', 'sp_shop_widget_area' );
-
-add_action( 'genesis_header', 'custom_get_header_search_toggle' );
-/**
- * Outputs the header search form toggle button.
- */
-function custom_get_header_search_toggle() {
-    printf(
-        '<a href="#header-search-wrap" aria-controls="header-search-wrap" aria-expanded="false" role="button" class="toggle-header-search"><span class="screen-reader-text">%s</span><span class="ionicons ion-ios-search"></span></a>',
-        __( 'Show Search', 'genesis-sample' )
-    );
-}
-
-add_action( 'genesis_header', 'custom_do_header_search_form' );
-/**
- * Outputs the header search form.
- */
-function custom_do_header_search_form() {
-    $button = sprintf(
-        '<a href="#" role="button" aria-expanded="false" aria-controls="header-search-wrap" class="toggle-header-search close"><span class="screen-reader-text">%s</span><span class="ionicons ion-ios-close-empty"></span></a>',
-        __( 'Hide Search', 'genesis-sample' )
-    );
-
-    printf(
-        '<div id="header-search-wrap" class="header-search-wrap">%s %s</div>',
-        get_search_form( false ),
-        $button
-    );
-}
-
-// Change posts per page in a specific category
-add_action( 'pre_get_posts', 'mp_design_cat_posts_per_page' );
-function mp_design_cat_posts_per_page( $query ) {
-	if( $query->is_main_query() && is_category( 'tutoriale-video-wordpress' ) && ! is_admin() ) {
-		$query->set( 'posts_per_page', '12' );
-	}
-}
-
-add_filter( 'gca_load_column_styles', '__return_false' );
-
-/**
- * Remove URL field from comment form
- *
- */
-function be_remove_url_from_comment_form( $fields ) {
-  unset($fields['url']);
-  return $fields;
-}
-add_filter( 'comment_form_default_fields', 'be_remove_url_from_comment_form' );
-
-/**
- * Remove URL from existing comments
- *
- */
-function be_remove_url_from_existing_comments( $author_link ) {
-  return strip_tags( $author_link );
-}
-add_filter( 'get_comment_author_link', 'be_remove_url_from_existing_comments' );
-
-
-// Remove dashicons in frontend for unauthenticated users
-add_action( 'wp_enqueue_scripts', 'toki_dequeue_dashicons' );
-function toki_dequeue_dashicons() {
-	if ( ! is_user_logged_in() ) {
-		wp_deregister_style( 'dashicons' );
-	}
 }
