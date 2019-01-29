@@ -418,14 +418,14 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #007aff;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 4px;
 	color: #fff;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 12px 35px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
@@ -1911,7 +1911,7 @@ p.entry-meta {
 }
 
 .front-page-1 {
-    background-image: url(/images/one.svg), radial-gradient(ellipse at bottom right, #1cafc6, #012690);
+    background-image: url(./images/one.svg), radial-gradient(ellipse at bottom right, #1cafc6, #012690);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1926,6 +1926,6 @@ p.entry-meta {
 
 @media only screen and (min-width:960px) {
 .front-page-1 .widget-wrap {
-        padding-right: 40%
+        padding: 100px 40% 80px 0;
     }
  }
