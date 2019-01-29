@@ -1909,3 +1909,23 @@ p.entry-meta {
 .site-inner.front-page .widget:last-child {
     margin-bottom: 0;
 }
+
+.front-page-1 {
+    background-image: url(/images/one.svg), radial-gradient(ellipse at bottom right, #1cafc6, #012690);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff
+}
+
+.front-page-1 h1 {
+    font-size: 4rem;
+    font-size: 40px;
+    font-weight: 700
+}
+
+@media only screen and (min-width:960px) {
+.front-page-1 .widget-wrap {
+        padding-right: 40%
+    }
+ }
