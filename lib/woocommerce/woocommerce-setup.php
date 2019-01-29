@@ -6,7 +6,7 @@
  *
  * @package Genesis Sample
  * @author  StudioPress
- * @license GPL-2.0-or-later
+ * @license GPL-2.0+
  * @link    https://www.studiopress.com/
  */
 
@@ -178,3 +178,29 @@ function genesis_sample_gallery_image_thumbnail( $size ) {
 	return $size;
 
 }
+/**
+ * Force correct layouts.
+ */
+function sp_force_layouts() {
+
+    // Make sure WooCommerce is activated.
+    if ( ! class_exists( 'WooCommerce' ) ) {
+        return;
+    }
+
+	if ( is_shop() || is_product_category() || is_product_tag() ) {
+        // Shop, category and tag pages.
+        return __genesis_return_sidebar_content();
+
+    } elseif ( is_singular( 'product' ) || is_cart() || is_checkout() || is_account_page() || is_front_page() ) {
+        // Single products, cart, checkout, front page.
+        return __genesis_return_full_width_content();
+
+    } else {
+        // Default layout.
+	   return;
+
+    }
+
+}
+add_filter( 'genesis_site_layout', 'sp_force_layouts' );

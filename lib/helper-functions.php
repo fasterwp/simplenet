@@ -6,7 +6,7 @@
  *
  * @package Genesis Sample
  * @author  StudioPress
- * @license GPL-2.0-or-later
+ * @license GPL-2.0+
  * @link    https://www.studiopress.com/
  */
 

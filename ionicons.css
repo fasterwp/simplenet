@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*!
+  Ionicons, v2.0.0
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/benjsperry  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
+
+  Android-style icons originally built by Google’s
+  Material Design Icons: https://github.com/google/material-design-icons
+  used under CC BY http://creativecommons.org/licenses/by/4.0/
+  Modified icons to fit ionicon’s grid from original.
+*/
+@font-face { font-family: "Ionicons"; src: url("./fonts/ionicons.eot"); src: url("./fonts/ionicons.eot#iefix") format("embedded-opentype"), url("./fonts/ionicons.ttf") format("truetype"), url("./fonts/ionicons.woff") format("woff"), url("./fonts/ionicons.svg#Ionicons") format("svg"); font-weight: normal; font-style: normal; }
+.ion, .ionicons, .ion-ios-arrow-down:before, .ion-ios-close-empty:before, .ion-ios-minus-empty:before, .ion-ios-plus-empty:before, .ion-ios-search:before, .ion-navicon:before, .ion-search:before { display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.ion-ios-arrow-down:before { content: "\f3d0"; }
+
+.ion-ios-close-empty:before { content: "\f404"; }
+
+.ion-ios-minus-empty:before { content: "\f462"; }
+
+.ion-ios-plus-empty:before { content: "\f489"; }
+
+.ion-ios-search:before { content: "\f4a5"; }
+
+.ion-navicon:before { content: "\f20e"; }
+
+.ion-search:before { content: "\f4a4"; }
+
+/*# sourceMappingURL=ionicons.css.map */

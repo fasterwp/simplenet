@@ -1,43 +1,85 @@
 <?php
+
+add_action( 'genesis_meta', 'masa_front_page_genesis_meta' );
 /**
- * Homepage Template.
- */
-
-add_filter( 'genesis_attr_site-inner', 'be_site_inner_attr' );
-/**
- * Adds attributes from 'entry', since this replaces the main entry.
+ * Add widget support for homepage. If no widgets active, display the default loop.
  *
- * @author Bill Erickson
- * @link http://www.billerickson.net/full-width-landing-pages-in-genesis/
- *
- * @param array $attributes Existing attributes.
- * @return array Amended attributes.
+ * @since 1.0.0
  */
-function be_site_inner_attr( $attributes ) {
+function masa_front_page_genesis_meta() {
 
-    // Add a class of 'full' for styling this .site-inner differently.
-    $attributes['class'] .= ' front-page';
+	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' )) {
 
-    // Add an id of 'genesis-content' for accessible skip links.
-    $attributes['id'] = 'genesis-content';
+		// Enqueue scripts and styles.
+		add_action( 'wp_enqueue_scripts', 'masa_enqueue_front_script_styles', 1 );
 
-    // Add the attributes from .entry, since this replaces the main entry.
-    $attributes = wp_parse_args( $attributes, genesis_attributes_entry( array() ) );
+		// Add front-page body class.
+		add_filter( 'body_class', 'masa_body_class' );
 
-    return $attributes;
+		// Force full width content layout.
+		add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+
+		// Remove breadcrumbs.
+		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+
+		// Remove the default Genesis loop.
+		remove_action( 'genesis_loop', 'genesis_do_loop' );
+
+		// Add front page widgets.
+		add_action( 'genesis_before_loop', 'masa_front_page_widgets' );
+
+	}
 
 }
 
-// Displays header.
-get_header();
+// Define scripts and styles.
+function masa_enqueue_front_script_styles() {
 
-// Displays front-page widget areas.
-for ( $i = 1; $i <= 5; $i++ ) {
-    genesis_widget_area( "front-page-{$i}", array(
-        'before' => '<div class="front-page-' . $i . ' widget-area"><div class="wrap">',
-        'after'  => '</div></div>',
-    ) );
+	wp_enqueue_style( 'masa-front-styles', get_stylesheet_directory_uri() . '/style-front.css' );
+
 }
 
-// Displays Footer.
-get_footer();
+// Add front-page body class.
+function masa_body_class( $classes ) {
+
+	$classes[] = 'front-page';
+
+	return $classes;
+
+}
+
+
+// Add markup for front page widgets.
+function masa_front_page_widgets() {
+
+	echo '<h2 class="screen-reader-text">' . __( 'Main Content', 'genesis-sample' ) . '</h2>';
+
+	genesis_widget_area( 'front-page-1', array(
+		'before' => '<div class="front-page-1"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-1' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-2', array(
+		'before' => '<div class="front-page-2"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-2' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-3', array(
+		'before' => '<div class="front-page-3"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-3' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-4', array(
+		'before' => '<div class="front-page-4"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-4' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-5', array(
+		'before' => '<div class="front-page-5"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-5' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+}
+
+// Run the Genesis loop.
+genesis();

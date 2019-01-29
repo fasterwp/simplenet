@@ -6,7 +6,7 @@
  *
  * @package Genesis Sample
  * @author  StudioPress
- * @license GPL-2.0-or-later
+ * @license GPL-2.0+
  * @link    https://www.studiopress.com/
  */
 
@@ -22,7 +22,6 @@ add_filter( 'genesis_theme_settings_defaults', 'genesis_sample_theme_defaults' )
 function genesis_sample_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 6;
-	$defaults['breadcrumb_front_page']     = 0;
 	$defaults['content_archive']           = 'full';
 	$defaults['content_archive_limit']     = 0;
 	$defaults['content_archive_thumbnail'] = 0;
@@ -46,7 +45,6 @@ function genesis_sample_theme_setting_defaults() {
 		genesis_update_settings(
 			array(
 				'blog_cat_num'              => 6,
-				'breadcrumb_front_page'     => 0,
 				'content_archive'           => 'full',
 				'content_archive_limit'     => 0,
 				'content_archive_thumbnail' => 0,

@@ -1,50 +1,43 @@
-# Genesis Sample Theme
+# Masa Theme
 
-GitHub project link: https://github.com/studiopress/genesis-sample/.
-
-
-## Installation Instructions
-
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
+Github project link: https://github.com/fasterwp/masa/
 
 ## Theme Support
 
-Please visit https://my.studiopress.com/help/ for theme support.
+Please visit <https://fasterwp.com/contact/> for theme support.
 
-## For Developers
+## Installation Instructions
 
-The version of [Genesis Sample on GitHub](https://github.com/studiopress/genesis-sample/) includes tooling to check code against WordPress standards. To use it:
+### Install Genesis Framework
 
-1. Install Composer globally on your development machine. [See Composer setup steps](https://getcomposer.org/doc/00-intro.md#downloading-the-composer-executable).
-2. In the command line, change directory to the Genesis Sample folder.
-3. Type the command `composer install` to install PHP development dependencies.
-4. Type `composer phpcs` to run coding standards checks.
+### Install and activate Masa child theme (masa.zip)
 
-You'll see output highlighting issues with PHP files that do not conform to Genesis Sample coding standards.
+1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
+2. Go to your WordPress dashboard and select Appearance.
+3. Activate the Masa theme.
+4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure theme to your liking.
 
-### npm scripts
+### Install and activate recommended plugins
 
-Scripts are also provided to help with CSS linting, CSS autoprefixing, and creation of pot language files. To use them:
+- Genesis eNews Extended
+- Genesis Simple Edits
+- Ninja Forms
+- AJAX Thumbnail Rebuild
+- Genesis Columns Advanced
+- Genesis Simple FAQ
+- Genesis Testimonial Slider
+- Widget Importer & Exporter
+- Simple Social Icons
 
-1. Install [Node.js](https://nodejs.org/), which also gives you the Node Package Manager (npm).
-2. In the command line, change directory to the Genesis Sample folder.
-3. Type the command `npm install` to install dependencies.
+### Import demo content
 
-You can then type any of these commands:
+You can find the demo content in the /xml folder (file name masa-demo-content.xml).
+Inside your WordPress dashboard, go to Tools > Import, install WordPress Importer if necessary and run the importer.
 
-- `npm run autoprefixer` to add and remove vendor prefixes in `style.css`.
-- `npm run makepot` to regenerate the `languages/genesis-sample.pot` file.
-- `npm run lint:css` to generate a report of style violations for `style.css`.
-- `npm run zip` to create a genesis-sample.zip of the current branch. Excludes files marked export-ignore in `.gitattributes`.
+If you installed and activated the Widget Importer & Exporter plugin go to Tools > Widget Importer & Exporter, select the masa-widgets.wie file from the /xml folder and Import widgets.
 
-### Packaging for distribution
+### Setup Genesis, widgets & all
 
-1. Follow the install instructions for npm scripts above.
-2. Switch to the git branch you plan to distribute.
-3. Bump version numbers manually and commit those changes.
-4. Type `npm run zip` to create `genesis-sample.zip`. Files marked export-ignore in `.gitattributes` are excluded from the zip.
-
-The `zip` command is an alias for `git archive -o genesis-sample.zip --prefix=genesis-sample/ HEAD`.
+Inside your WordPress dashboard, go to Genesis > Theme Settings and configure to your liking.
+Inside your WordPress dashboard, go to Appearance > Widgets and configure to your liking.
+Inside your WordPress dashboard, go to Appearance > Customizer and configure to your liking.

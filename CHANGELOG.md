@@ -1,36 +1,31 @@
-# Genesis Sample Theme Changelog
+# Masa Theme Changelog
 
-## [2.8.0] - 2019-01-16
-Requires Genesis 2.8.0+.
+## [2.6.3] - 2018-09-11
 
-* New: Block-based homepage layout.
-* New: Auto homepage setup upon theme activation using the new onboarding feature from Genesis 2.8.0. (See `config/onboarding.php`.)
-* New: “Blocks” page template for use with the block editor. The template removes the title and breadcrumbs, and forces a full-width layout.
-* New: Load configuration with the new `genesis_get_config()` function from Genesis 2.8.0. (See `functions.php` and the `config/` folder.)
-* New: Add `has-no-blocks` body class if singular post/page contains no blocks.
-* New: Add `first-block-[block-name]` body class. Helps remove top padding when blocks such as the Cover block are first on the page.
-* New: Add `first-block-align-[alignment]` body class. Helps adjust styles if the first block is full-width.
-* Update: Styling adjustments for buttons, content width, and column blocks.
-* Update: Prevent 'admin' user being created during manual XML demo content import.
-* Update: Remove editor font sizes shortname from Gutenberg font sizes config. (The shortname is no longer used in WordPress.)
-* Tools: Improve `npm run zip` command to create archives that unzip to a 'genesis-sample' folder on Windows.
+* move nav back to right
+* remove prism.CSS
+* remove comments link
 
-## [2.7.1] - 2018-12-20
-* Fix: Reinstate normalize.css and update to version 8.0.1.
-* Fix: Reinstate Genesis Column Classes.
-* Fix: Stop background hover color appearing for mobile menu-highlight button.
 
-## [2.7.0] - 2018-12-12
-* New: Add Gutenberg opt-in feature support (wide blocks, fonts, colors, editor and block styling).
-* New: Add theme support for responsive media embeds.
-* Update: General styling adjustments (remove rems for font size, center button text, responsive menu adjustments, use circles for unordered sublists).
-* Update: WooCommerce styling adjustments, make mobile-first.
-* Fix: Use custom logo height fallback of '1' if an SVG logo is used instead of a bitmap. (SVG support still has to be enabled in WordPress, which disables it by default.)
-* Fix: Prevent featured images in Featured Posts widgets appearing at 75px square.
-* Fix: Prevent JavaScript error if wp object is undefined.
-* Fix: Prevent title overlaying custom logo when printing.
-* Tools: Add npm scripts for automation. See https://github.com/studiopress/genesis-sample#npm-scripts.
-* Tools: PHPCS and Composer improvements.
+## [2.6.2] - 2018-05-31
+
+* Centered Navigation
+* Header search
+* Small Improvements (from Sridhar Katakam)
+* Remove ionicons font shortcodes
+* Replace dashicons with Ionicons
+* Add pricing page (4-col only)
+* Add Prism CSS
+
+## [2.6.1] - 2018-04-22
+
+* Force better (imho) layouts for WooCommerce.
+* Register and display shop sidebar widget area for WooCommerce.
+* Add front-page widget areas.
+* Add ionicons font shortcodes.
+* Add first, last, and widget-# CSS classes to widgets.
+* Add flexible widgets.
+* Add single post navigation.
 
 ## [2.6.0] - 2018-03-22
 * Fix product gallery bug in WooCommerce 3.0 update.
@@ -78,9 +73,6 @@ Requires Genesis 2.8.0+.
 * Set localization.
 * Update XML file.
 
-[2.8.0]: https://github.com/copyblogger/genesis-sample/compare/2.7.1...2.8.0
-[2.7.1]: https://github.com/copyblogger/genesis-sample/compare/2.7.0...2.7.1
-[2.7.0]: https://github.com/copyblogger/genesis-sample/compare/2.6.0...2.7.0
 [2.6.0]: https://github.com/copyblogger/genesis-sample/compare/2.3.0...2.6.0
 [2.3.0]: https://github.com/copyblogger/genesis-sample/compare/2.2.4...2.3.0
 [2.2.4]: https://github.com/copyblogger/genesis-sample/compare/2.2.3...2.2.4
