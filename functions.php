@@ -270,3 +270,6 @@ for ( $i = 1; $i <= 5; $i++ ) {
         )
     );
 }
+
+// Add single post navigation.
+add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
