@@ -1,0 +1,26 @@
+////
+/// Wrap component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.wrap {
+	width: 90%;
+	max-width: $mq-xl;
+
+	@include margin(null auto);
+
+	@include mq(m) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	// Sub wrap.
+	.wrap {
+		width: 100%;
+		max-width: 100%;
+	}
+}

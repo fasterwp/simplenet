@@ -1,0 +1,290 @@
+# Copyright (C) 2018 Startup Pro 1.1.6
+# This file is distributed under the same license as the Startup Pro 1.1.6 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Startup Pro 1.1.6\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: config/kirki.php:70
+msgid "Button Left Color"
+msgstr ""
+
+#: config/kirki.php:87
+msgid "Button Right Color"
+msgstr ""
+
+#: config/kirki.php:112
+msgid "Link Color"
+msgstr ""
+
+#: config/kirki.php:129
+msgid "Hero Section Left Color"
+msgstr ""
+
+#: config/kirki.php:146
+msgid "Hero Section Right Color"
+msgstr ""
+
+#: config/kirki.php:163
+msgid "Hero Text Color"
+msgstr ""
+
+#: config/kirki.php:185
+msgid "Footer Background Color"
+msgstr ""
+
+#: config/kirki.php:198
+msgid "Footer Text Color"
+msgstr ""
+
+#: config/kirki.php:211
+msgid "Display Tagline"
+msgstr ""
+
+#: config/kirki.php:220
+msgid "Header Media Opacity"
+msgstr ""
+
+#: config/kirki.php:239
+msgid "Display featured image on singular blog posts?"
+msgstr ""
+
+#: config/kirki.php:240
+msgid "Check this setting to display post featured images above the post content on singular blog posts."
+msgstr ""
+
+#: config/kirki.php:247
+msgid "Use featured image as hero section background?"
+msgstr ""
+
+#: config/kirki.php:248
+msgid "Check this setting to enable post and page featured images to be used as the hero section background image."
+msgstr ""
+
+#: config/kirki.php:255
+msgid "Use Header Media image as hero section fallback?"
+msgstr ""
+
+#: config/kirki.php:256
+msgid "Check this setting to use the Header Media image as the hero section background image if no featured image exists. Header Media can be set from Appearance → Customize → Header Media."
+msgstr ""
+
+#: config/kirki.php:263
+msgid "Gradient Angle"
+msgstr ""
+
+#: config/kirki.php:264
+msgid "Select the direction for the hero section and button gradient angle."
+msgstr ""
+
+#: config/kirki.php:296
+msgid "Button Border Radius"
+msgstr ""
+
+#: config/kirki.php:315
+msgid "Hero Section Divider"
+msgstr ""
+
+#: config/kirki.php:319, config/kirki.php:361
+msgid "None"
+msgstr ""
+
+#: config/kirki.php:320
+msgid "Curve"
+msgstr ""
+
+#: config/kirki.php:321
+msgid "Angle"
+msgstr ""
+
+#: config/kirki.php:322
+msgid "Wave"
+msgstr ""
+
+#: config/kirki.php:328
+msgid "Hero Section Search Style"
+msgstr ""
+
+#: config/kirki.php:332
+msgid "Light"
+msgstr ""
+
+#: config/kirki.php:333
+msgid "Dark"
+msgstr ""
+
+#: config/kirki.php:339
+msgid "Front Page 1 Text Alignment"
+msgstr ""
+
+#: config/kirki.php:343
+msgid "Left"
+msgstr ""
+
+#: config/kirki.php:344
+msgid "Center"
+msgstr ""
+
+#: config/kirki.php:345
+msgid "Right"
+msgstr ""
+
+#: config/kirki.php:357
+msgid "Front Page 1 Video Style"
+msgstr ""
+
+#: config/kirki.php:362
+msgid "Browser"
+msgstr ""
+
+#: includes/enqueue.php:61
+msgid "Menu"
+msgstr ""
+
+#: includes/enqueue.php:62
+msgid "Sub Menu"
+msgstr ""
+
+#: includes/general.php:316
+msgid "Read More"
+msgstr ""
+
+#: includes/general.php:350
+msgid "Category icon"
+msgstr ""
+
+#: includes/general.php:351
+msgid "Tag icon"
+msgstr ""
+
+#: includes/hero.php:114
+msgid "Latest Posts"
+msgstr ""
+
+#: includes/hero.php:119
+msgid "Not found, error 404"
+msgstr ""
+
+#: includes/hero.php:157
+msgid "Showing the latest posts"
+msgstr ""
+
+#: includes/kirki.php:76
+msgid "Display Site Title"
+msgstr ""
+
+#: includes/kirki.php:93
+msgid "Startup Pro Settings"
+msgstr ""
+
+#: includes/kirki.php:250
+msgid "Please install the Kirki plugin to take full advantage of this theme's customizer capabilities"
+msgstr ""
+
+#: includes/kirki.php:254
+msgid "Install Kirki Toolkit now"
+msgstr ""
+
+#: includes/kirki.php:256
+msgid "Install Now"
+msgstr ""
+
+#: includes/kirki.php:270
+msgid "You have installed Kirki. Activate it to take advantage of this theme's features in the customizer."
+msgstr ""
+
+#: includes/kirki.php:274
+msgid "Activate Kirki Toolkit now"
+msgstr ""
+
+#: includes/kirki.php:276
+msgid "Activate Now"
+msgstr ""
+
+#: includes/kirki.php:297, includes/kirki.php:299
+msgid "Don't show this again"
+msgstr ""
+
+#: includes/kirki.php:298
+msgid "Dismiss"
+msgstr ""
+
+#: includes/kirki.php:309
+msgid "Are you sure? Dismissing this message will hide the installation recommendation and you will have to manually install and activate the plugin in the future."
+msgstr ""
+
+#: includes/setup.php:72
+msgid "Header Menu"
+msgstr ""
+
+#: includes/setup.php:73
+msgid "After Header Menu"
+msgstr ""
+
+#: includes/setup.php:128
+msgid "Hero Section Image"
+msgstr ""
+
+#: includes/widgets.php:22
+msgid "Front Page 1"
+msgstr ""
+
+#: includes/widgets.php:23
+msgid "This the the Front Page 1 widget area."
+msgstr ""
+
+#: includes/widgets.php:31
+msgid "Front Page 2"
+msgstr ""
+
+#: includes/widgets.php:32
+msgid "This the the Front Page 2 widget area."
+msgstr ""
+
+#: includes/widgets.php:38
+msgid "Front Page 3"
+msgstr ""
+
+#: includes/widgets.php:39
+msgid "This the the Front Page 3 widget area."
+msgstr ""
+
+#: includes/widgets.php:45
+msgid "Front Page 4"
+msgstr ""
+
+#: includes/widgets.php:46
+msgid "This the the Front Page 4 widget area."
+msgstr ""
+
+#: includes/widgets.php:52
+msgid "Before Footer"
+msgstr ""
+
+#: includes/widgets.php:53
+msgid "This is the Before Footer widget area"
+msgstr ""
+
+#: includes/widgets.php:59
+msgid "Footer Credits"
+msgstr ""
+
+#: includes/widgets.php:60
+msgid "This is the Footer Credits widget area"
+msgstr ""
+
+#: templates/page-builder.php:5
+msgid "Page Builder"
+msgstr ""
+
+#: templates/page-landing.php:5
+msgid "Landing Page"
+msgstr ""

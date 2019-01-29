@@ -1,0 +1,21 @@
+////
+/// Site inner object.
+///
+/// @group  Objects
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.site-inner {
+
+	.wrap {
+
+		@include mq(m) {
+			max-width: $mq-l;
+
+			.front-page & {
+				max-width: $mq-xl;
+			}
+		}
+	}
+}

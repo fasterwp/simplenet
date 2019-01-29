@@ -1,0 +1,18 @@
+////
+/// Header right component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.header-widget-area {
+
+	@include mq(m) {
+		margin-left: $spacing--l;
+	}
+
+	.widget {
+		margin-bottom: 0;
+	}
+}

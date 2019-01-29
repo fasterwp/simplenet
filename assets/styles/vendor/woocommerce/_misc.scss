@@ -1,0 +1,35 @@
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border-top: 0;
+	border-radius: $base--border--radius;
+	background-color: $color--gray-10;
+	box-shadow: $base--box-shadow;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include mq(m) {
+		display: block;
+	}
+
+	&:before,
+	&:before,
+	&:before {
+		color: $color--primary;
+	}
+}
+
+div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricted-content-message {
+	width: 48%;
+}
+
+.woocommerce-message .button.wc-forward {
+	width: auto;
+	margin-bottom: $spacing--m;
+
+	@include mq(xs) {
+		width: auto;
+		margin-bottom: 0;
+	}
+}
+

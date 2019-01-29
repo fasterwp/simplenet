@@ -1,0 +1,21 @@
+
+.edd_download {
+
+	&_purchase_form {
+
+		.single-download & {
+			margin-top: $spacing--l;
+		}
+	}
+}
+
+.edd_purchase_submit_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.edd-cart-added-alert {
+	margin-top: 0;
+	margin-left: $spacing--m;
+}

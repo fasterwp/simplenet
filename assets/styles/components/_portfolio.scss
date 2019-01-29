@@ -1,0 +1,118 @@
+////
+/// Portfolio component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+
+.tax-portfolio-type,
+.post-type-archive-portfolio {
+
+	.hero-section {
+
+		@include mq(m) {
+			padding-bottom: $spacing--xxxl + $spacing--xl;
+		}
+	}
+
+	.content {
+
+		@include mq(m) {
+			margin-top: calc(-#{$spacing--xxxl} + -#{$spacing--m});
+		}
+	}
+
+	.entry {
+		display: flex;
+		overflow: hidden;
+		position: relative;
+		padding: 0;
+		color: $color--white;
+		text-align: center;
+		transition: all $base--transition-duration $base--transition-timing-function;
+		align-items: center;
+		justify-content: center;
+
+		&.hide {
+			position: absolute;
+			opacity: 0;
+			transform: scale(0.1);
+		}
+
+		&-header {
+			display: flex;
+			display: none;
+			align-items: center;
+			justify-content: center;
+
+			@include position(absolute, 0 0 0 0);
+		}
+
+		&-content {
+			width: 100%;
+		}
+	}
+
+	.portfolio-featured-image {
+
+		a {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.portfolio-items {
+	width: 100%;
+
+	@include grid;
+}
+
+.portfolio-sizer {
+	width: 25%;
+}
+
+.portfolio-filter {
+	display: flex;
+	width: 100%;
+	font-size: smaller;
+	font-weight: $font-weight--semibold;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	.no-js & {
+		display: none;
+	}
+
+	.wrap {
+		justify-content: center;
+
+		@include card(l);
+		@include padding($spacing--l $spacing--m);
+		@include margin(0 auto $spacing--xl);
+
+		@include mq(m) {
+			width: auto;
+			min-width: $mq-s;
+			max-width: $mq-s;
+		}
+	}
+
+	a {
+		display: inline-block;
+		margin: $spacing--m;
+		color: $color--gray-80;
+
+		&:hover,
+		&:focus,
+		&.active {
+			outline: none;
+			color: $color--primary;
+		}
+	}
+}

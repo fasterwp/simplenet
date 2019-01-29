@@ -1,0 +1,311 @@
+////
+/// Sub menu component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.sub-menu {
+	display: none;
+	top: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-radius: $base--border--radius;
+	background-color: $color--gray-10;
+	text-transform: none;
+	list-style-type: none;
+
+	@include mq(m) {
+		display: block !important;
+		position: absolute;
+		top: calc(100% - 1px);
+		width: auto;
+		min-width: 22rem;
+		margin: 0;
+		padding: $spacing--m 0 0;
+		opacity: 0;
+		background-color: $color--white;
+		box-shadow: $base--box-shadow--l;
+		white-space: nowrap;
+		transition: all 0.1s ease;
+		transform: perspective(880px) rotateX(-40deg) scale(0.9);
+		transform-origin: center 0;
+		pointer-events: none;
+
+		//transform: none;
+		//opacity: 1;
+		//pointer-events: initial;
+
+		@include clearfix;
+
+		&:before {
+			display: block;
+			content: "";
+
+			@include margin(0 auto);
+			@include position(absolute, -6px -50% null);
+			@include triangle("up", 14px, 7px, $color--white);
+		}
+	}
+
+	.menu-item-has-grandchildren & {
+
+		@include mq(m) {
+			min-width: 33rem;
+		}
+	}
+
+	.sfHover & {
+
+		@include mq(m) {
+			opacity: 1;
+			transform: none;
+			pointer-events: initial;
+			transition: all .4s ease;
+		}
+	}
+
+	.no-js .menu-item-has-children:hover > &,
+	.no-js .menu-item-has-children:focus > & {
+		display: block;
+		opacity: 1;
+		transform: none;
+		pointer-events: all;
+	}
+
+	@include mq(m) {
+
+		.menu-item-has-children:hover > &,
+		.menu-item-has-children:focus > & {
+			display: block;
+			opacity: 1;
+			transform: none;
+			pointer-events: all;
+			transition: all .4s ease;
+		}
+	}
+
+	// Sub menu menu item.
+	.menu-item {
+		margin: $spacing--m 0;
+		padding: 0;
+
+		@include mq($until: m) {
+
+			.no-js & {
+				width: auto;
+				margin: 0 $spacing--m 0 0;
+				padding: 0;
+			}
+		}
+
+		@include mq(m) {
+			width: auto;
+			margin: 0;
+			padding: 0;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		&:first-of-type {
+			margin-top: $spacing--l;
+
+			@include mq(m) {
+				margin-top: 0;
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: $spacing--l;
+
+			@include mq(m) {
+				margin-bottom: 0;
+			}
+
+			> a {
+
+				@include mq(m) {
+					padding-bottom: $spacing--m + $spacing--s;
+				}
+			}
+		}
+
+		~ .menu-item-has-children {
+			margin-top: 0;
+		}
+
+		&.menu-item-has-children {
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+
+			@include mq(m) {
+				width: 33rem;
+			}
+
+			&:first-of-type {
+
+				> a {
+
+					@include mq(m) {
+						margin-top: 0;
+						padding-top: $spacing--s;
+					}
+				}
+			}
+
+			&:last-of-type {
+				margin-bottom: $spacing--m;
+
+				@include mq(m) {
+					margin-bottom: 0;
+				}
+			}
+
+			> a {
+
+				@include mq(m) {
+
+					@include padding($spacing--m null);
+				}
+			}
+
+			.sub-menu-toggle {
+				display: none;
+			}
+		}
+	}
+
+	.menu-item-link {
+		width: 100%;
+		color: $color--gray-80;
+
+		@include padding(0 null);
+
+		@include mq(m) {
+			display: block;
+			padding: $spacing--s $spacing--m + $spacing--s;
+		}
+
+		@include hover-focus {
+			color: $color--primary;
+
+			@include mq(m) {
+
+				span {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	// Sub sub menu.
+	& & {
+		display: block !important;
+		padding: 0;
+
+		@include mq(m) {
+			display: flex !important;
+			position: static;
+			right: auto;
+			left: auto;
+			width: 100%;
+			margin-right: 0;
+			margin-left: 0;
+			padding: $spacing--m $spacing--m + $spacing--s;
+			border-radius: 0;
+			opacity: 1;
+			background-color: $color--gray-10;
+			box-shadow: none;
+			font-weight: $font-weight--semibold;
+			line-height: 1;
+			text-transform: none;
+			transform: none;
+			transform: none;
+			flex-wrap: wrap;
+
+			.menu-item {
+				width: 50%;
+
+				a {
+
+					@include mq(m) {
+
+						@include padding($spacing--s 0);
+					}
+				}
+			}
+		}
+
+		.menu-item {
+
+			&:first-of-type {
+				margin-top: $spacing--m;
+
+				@include mq(m) {
+					margin-top: 0;
+				}
+			}
+
+			&:last-of-type {
+				margin-bottom: $spacing--m;
+
+				@include mq(m) {
+					margin-bottom: 0;
+				}
+
+				> a {
+
+					@include mq(m) {
+						padding-bottom: $spacing--s;
+					}
+				}
+			}
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	// Sub menu toggle.
+	&-toggle {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		line-height: 0;
+		justify-content: center;
+
+		@include size($spacing--l);
+
+		@include mq(m) {
+			display: none;
+		}
+
+		@include hover-focus {
+			background-color: transparent;
+			transform: none;
+		}
+
+		&:focus {
+			outline: $base--border;
+		}
+
+		&:before {
+			content: "";
+
+			@include triangle("down", 1rem, 0.5rem, $color--gray-80);
+		}
+
+		&.activated {
+
+			&:before {
+
+				@include triangle("up", 1rem, 0.5rem, $color--gray-80);
+			}
+		}
+	}
+}

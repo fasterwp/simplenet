@@ -1,0 +1,19 @@
+////
+/// Heading.
+///
+/// @group  Base
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+#{$all-headings} {
+
+	@include heading;
+}
+
+@each $heading, $font-size in $font-sizes {
+
+	#{$heading} {
+		font-size: $font-size;
+	}
+}

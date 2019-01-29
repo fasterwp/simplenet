@@ -1,0 +1,95 @@
+////
+/// Sidebar component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.sidebar {
+
+	@include margin($spacing--m null);
+
+	@include mq(m) {
+
+		@include margin($spacing--l null);
+		z-index: 1;
+		margin-top: -$spacing--xl;
+	}
+
+	.content-sidebar &,
+	.sidebar-content & {
+
+		@include mq(m) {
+			width: $layout--width--sidebar;
+		}
+	}
+
+	.content-sidebar & {
+
+		@include mq(m) {
+			position: relative;
+			width: calc(#{$layout--width--sidebar} + #{$spacing--xl});
+			margin-top: -$spacing--xxl + -$spacing--l;
+			padding: $spacing--l;
+			border-radius: 0 $base--border--radius 0 0;
+			background-color: $color--white;
+
+			&:before {
+				display: block;
+				height: 30rem;
+				box-shadow: 0 -#{$base--box-shadow--y} $base--box-shadow--blur $base--box-shadow--spread / 2 rgba($base--box-shadow--color, $base--box-shadow--opacity);
+				content: "";
+				border-radius: 0 $base--border--radius 0 0;
+
+				@include position(absolute, 0 0 auto 0);
+			}
+		}
+	}
+
+	.sidebar-content & {
+
+		@include mq(m) {
+			position: relative;
+			width: calc(#{$layout--width--sidebar} + #{$spacing--xl});
+			margin-top: -$spacing--xxl + -$spacing--l;
+			padding: $spacing--l;
+			border-radius: $base--border--radius 0 0 0;
+			background-color: $color--white;
+
+			&:before {
+				display: block;
+				height: 30rem;
+				box-shadow: 0 -#{$base--box-shadow--y} $base--box-shadow--blur $base--box-shadow--spread / 2 rgba($base--box-shadow--color, $base--box-shadow--opacity);
+				content: "";
+				border-radius: $base--border--radius 0 0 0;
+
+				@include position(absolute, 0 0 auto 0);
+			}
+		}
+	}
+
+	ol,
+	ul {
+		list-style-type: none;
+	}
+
+	.menu {
+		justify-content: flex-start;
+	}
+
+	.menu-item {
+		width: 50%;
+		padding: 0 0 $spacing--m;
+
+		&.button {
+			margin: 0;
+			padding: 0;
+		}
+
+		&-link {
+			padding: 0;
+			color: $color--gray-60;
+		}
+	}
+}

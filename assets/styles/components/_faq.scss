@@ -1,0 +1,93 @@
+////
+/// Simple FAQ component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.gs-faq {
+	border: $base--border;
+	border-radius: $base--border--radius;
+	background: $color--white;
+	box-shadow: $base--box-shadow;
+
+	.gs-faq__question {
+		display: block;
+		width: 100%;
+		margin-top: -1px;
+		margin-bottom: 0;
+		padding: $spacing--m * $perfect-fourth $spacing--xl $spacing--m * $perfect-fourth $spacing--m * $perfect-fourth;
+		border-bottom: $base--border;
+		border-radius: 0;
+		color: $color--gray-60;
+		background: transparent;
+		box-shadow: none;
+		font-size: $base--font-size;
+		font-weight: $font-weight--semibold;
+		text-align: left;
+		letter-spacing: normal;
+		text-transform: none;
+		line-height: $line-height--heading;
+
+		@include hover-focus {
+			background-color: $color--gray-10;
+			color: $color--gray-80;
+			box-shadow: inset 0 1px 0 $base--border--color;
+			transform: none;
+		}
+
+		&:first-of-type {
+			border-radius: $base--border--radius $base--border--radius 0 0;
+		}
+
+		&:last-of-type {
+			border-radius: 0 0 $base--border--radius $base--border--radius;
+			border-bottom: 0;
+		}
+
+		&:after {
+			float: right;
+			width: 1em;
+			margin-right: -$spacing--l;
+			color: $color--gray-50;
+			text-align: center;
+			content: "+";
+		}
+
+		&.gs-faq--expanded {
+
+			&:after {
+				content: "-";
+			}
+		}
+	}
+
+	&__answer__heading {
+
+		@include hide-visually();
+	}
+
+	&__answer {
+		display: none;
+		padding: $spacing--l;
+		border-bottom: $base--border;
+		background-color: $color--gray-10;
+
+		.no-js & {
+			display: block;
+		}
+
+		&:last-of-type {
+			border-top: $base--border;
+			border-bottom: 0;
+		}
+
+		p {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

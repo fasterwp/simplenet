@@ -1,0 +1,288 @@
+////
+/// Entry component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.entry {
+
+	@include clearfix;
+
+	.is-archive & {
+
+		@include card(m);
+
+		@include mq(xxs) {
+			width: $one-half;
+		}
+
+		@include mq(m) {
+			width: $one-third;
+			margin-left: $gutter;
+
+			&:nth-of-type(3n + 1) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.is-archive.center-content &,
+	.is-archive.content-sidebar &,
+	.is-archive.sidebar-content & {
+
+		@include mq(m) {
+			width: $one-half;
+
+			&:nth-of-type(3n + 1) {
+				margin-left: $gutter;
+			}
+
+			&:nth-of-type(2n + 1) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.is-singular & {
+		position: relative;
+		min-height: 30rem;
+		margin-top: -$spacing--xxl + -$spacing--xl + -$spacing--s;
+		margin-bottom: $spacing--l;
+		padding: 5vw;
+		border-radius: $base--border--radius;
+		background-color: $color--white;
+
+		@include mq(m) {
+			margin-top: -$spacing--xxxl + -$spacing--xl + -$spacing--m;
+			margin-bottom: $spacing--xl;
+			padding: $spacing--xl;
+		}
+
+		&:before {
+			display: block;
+			height: 30rem;
+			box-shadow: 0 -#{$spacing--l} $base--box-shadow--blur * 2 $base--box-shadow--spread rgba($base--box-shadow--color, 0.1);
+			content: "";
+
+			@include position(absolute, 0 0 auto 0);
+		}
+	}
+
+	.has-excerpt-shortcode.is-singular & {
+		margin-top: $spacing--xxxxl + $spacing--l;
+		margin-bottom: $spacing--xxl;
+
+		@include mq(m) {
+			margin-top: $spacing--xxxl;
+			margin-bottom: 0;
+		}
+	}
+
+	.has-excerpt-shortcode.has-hero-section-mockup & {
+		margin-top: $spacing--xxxl;
+		margin-bottom: $spacing--xxl;
+
+		@include mq(m) {
+			margin-top: $spacing--xxxxl;
+			margin-bottom: 0;
+		}
+	}
+
+	.has-excerpt-shortcode &,
+	.has-content-shortcode & {
+		background-color: transparent;
+		box-shadow: none;
+
+		@include padding(null null 0);
+	}
+
+	.has-content-shortcode & {
+		padding: 0 5vw;
+
+		@include mq(m) {
+			margin-top: -$spacing--xxxxl + -$spacing--l;
+		}
+	}
+
+	.has-featured-image &,
+	.has-excerpt-shortcode &,
+	.has-content-shortcode & {
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.page-template-page-landing .content & {
+		margin-top: $spacing--l;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.single.has-featured-image & {
+		margin-top: -$spacing--xxxl + -$spacing--xl;
+		background-color: transparent;
+
+		@include mq(m) {
+			margin: -$spacing--xxxl + -$spacing--xxl + -$spacing--xl 0 0;
+		}
+	}
+
+	.single.has-no-featured-image & {
+		margin-top: -$spacing--xxxl + -$spacing--l;
+
+		@include mq(m) {
+			margin: -$spacing--xxxl + -$spacing--xxl + -$spacing--l 0 0;
+		}
+	}
+
+	// Entry header.
+	&-header {
+	}
+
+	// Entry title.
+	&-title {
+
+		.is-archive .entry & {
+			display: block;
+			margin-top: $spacing--s;
+			margin-bottom: $spacing--s;
+			font-size: $font-size--h4;
+		}
+	}
+
+	// Entry title link.
+	&-title-link {
+	}
+
+	// Entry time.
+	&-time {
+	}
+
+	// Entry author.
+	&-author {
+	}
+
+	// Entry author link.
+	&-author-link {
+	}
+
+	// Entry author name.
+	&-author-name {
+	}
+
+	// Entry comments link
+	&-comments-link {
+	}
+
+	// Entry meta.
+	&-meta {
+		position: relative;
+
+		.is-archive & {
+			display: flex;
+			margin-bottom: 0;
+			font-size: smaller;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	// Entry image link.
+	&-image-link {
+		display: block;
+		width: calc(100% + (#{$spacing--l} * 2));
+		max-width: calc(100% + (#{$spacing--l} * 2));
+		margin: -#{$spacing--l} -#{$spacing--l} $spacing--l;
+	}
+
+	// Entry image.
+	&-image {
+		border-radius: $base--border--radius $base--border--radius 0 0;
+
+		img {
+			width: 100%;
+			min-width: 100%;
+			max-width: 100%;
+			margin: 0 0 5vw;
+			border-radius: $base--border--radius;
+			box-shadow: $base--box-shadow;
+
+			@include mq(m) {
+				width: calc(100% + (#{$spacing--xl} * 2));
+				max-width: calc(100% + (#{$spacing--xl} * 2));
+				margin: -#{$spacing--xl} -#{$spacing--xl} $spacing--xl;
+			}
+		}
+	}
+
+	// Entry content.
+	&-content {
+		position: relative;
+		color: $color--gray-70;
+
+		pre {
+
+			#{$all-headings} {
+				color: $color--gray-30;
+			}
+		}
+	}
+
+	// Entry footer.
+	&-footer {
+	}
+
+	// Entry categories.
+	&-categories {
+	}
+
+	// Entry tags.
+	&-tags {
+	}
+
+	// Categories and tags.
+	&-categories,
+	&-tags {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-right: 0.3em;
+
+		img {
+			display: none;
+			margin-right: $spacing--s;
+			padding: $spacing--xxs;
+			border-radius: $spacing--xl;
+			background-color: $color--gray-20;
+		}
+
+		a {
+			display: inline-block;
+			padding: 0 0.5em;
+			border-radius: $base--border--radius;
+			color: $color--gray-60;
+			background-color: $color--gray-20;
+			font-size: small;
+			font-weight: $font-weight--bold;
+			text-decoration: none;
+		}
+	}
+}
+
+.more-link {
+	display: block;
+	font-weight: $font-weight--semibold;
+}
+
+.ellipses {
+	margin-left: -0.3em;
+}
+
+.post-edit-link {
+	display: none;
+}

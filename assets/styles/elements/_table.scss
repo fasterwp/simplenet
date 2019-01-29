@@ -1,0 +1,28 @@
+////
+/// Table.
+///
+/// @group  Base
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+table {
+	width: 100%;
+	margin: $spacing--s 0;
+	border-radius: $base--border--radius;
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-color: $color--white;
+	word-break: break-all;
+}
+
+th,
+td {
+	padding: $spacing--m;
+	border: $base--border;
+	text-align: left;
+}
+
+th {
+	font-weight: $font-weight--semibold;
+}

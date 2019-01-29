@@ -1,79 +1,44 @@
-# Masa Theme Changelog
+# Startup Pro Changelog
 
-## [2.6.3] - 2018-09-11
+## [1.1.6] - 2018-11-24
+* Fixed: Breadcrumbs on product and download shortcode pages
+* Fixed: Some breadcrumbs not clickable
+* Fixed: Only add animations to front-page
 
-* move nav back to right
-* remove prism.CSS
-* remove comments link
+## [1.1.5] - 2018-11-17
+* Added: Featured content styles for homepage
+* Changed: Improved breadcrumb display
+* Fixed: Angle divider 1px line on some devices
+* Fixed: Duplicate post meta on archives
+* Fixed: Sidebar overlay z-index issue
+* Fixed: Curve divider in Firefox
+* Fixed: Mobile menu broken on inner pages
 
+## [1.1.4] - 2018-11-13
+* Added: Front page fade-in animations
+* Added: Page Builder template
+* Added: Setting for default hero image
+* Fixed: Removed namespace from Landing Page template
 
-## [2.6.2] - 2018-05-31
+## [1.1.3] - 2018-11-10
+* Added: Hero section background option
+* Added: Tooltips to some customizer settings
+* Added: Hero image size
+* Changed: Entry-title to hero-title
+* Changed: Entry-subtitle to hero-subtitle
+* Changed: Refactored hero section functions
+* Fixed: Atomic blocks posts width
 
-* Centered Navigation
-* Header search
-* Small Improvements (from Sridhar Katakam)
-* Remove ionicons font shortcodes
-* Replace dashicons with Ionicons
-* Add pricing page (4-col only)
-* Add Prism CSS
+## [1.1.2] - 2018-11-09
+* Added: Front Page 1 video style setting
+* Fixed: Icon Widget defaults
 
-## [2.6.1] - 2018-04-22
+## [1.1.1] - 2018-11-06
+* Fixed: Incorrect script dependencies
 
-* Force better (imho) layouts for WooCommerce.
-* Register and display shop sidebar widget area for WooCommerce.
-* Add front-page widget areas.
-* Add ionicons font shortcodes.
-* Add first, last, and widget-# CSS classes to widgets.
-* Add flexible widgets.
-* Add single post navigation.
+## [1.1.0] - 2018-11-06
+* Changed: Complete rewrite
+* Removed: Composer packages
 
-## [2.6.0] - 2018-03-22
-* Fix product gallery bug in WooCommerce 3.0 update.
-* Improve compliance with WordPress coding standards.
-* Improve inline documentation.
-* Add content_width for media width.
-* Add logo width setting.
-* Add mobile first CSS.
-* Add Simple Social Icon defaults filter.
-* Add development tools.
-* Change custom header to custom logo.
-* Update favicon design.
-* Update theme tags.
-* Update typography and style.
-* Update XML demo content.
-* Update responsive menu to 1.1.3.
-* Update image size default functions for WooCommerce 3.3+.
-* Remove menu toggle border.
-* Remove unnecessary CSS vendor prefixes.
-
-## [2.3.0] - 2017-01-30
-* Add WooCommerce support to the theme and customizer.
-* Add an updated and improved responsive menu script.
-* Update the file structure.
-* Update documentation.
-* Update code standards.
-
-## [2.2.4] - 2016-06-08
-* Reorder font size on breadcrumbs.
-* Add Changelog.
-* Update to normalize.css 4.1.1.
-
-## [2.2.3] - 2016-05-18
-* Add accessibile mobile menu.
-* Add accessibility support for the 404 Page.
-* Add the custom header option to upload your own logo.
-* Add customizer option for primary color.
-* Add HTML5 support for gallery and captions.
-* Add Enlarged Avatars.
-* Add the After Entry Widget Area.
-* Reposition the secondary navigation menu to the footer.
-* Add theme defaults.
-* Add Landing Page template.
-* Add image size.
-* Set localization.
-* Update XML file.
-
-[2.6.0]: https://github.com/copyblogger/genesis-sample/compare/2.3.0...2.6.0
-[2.3.0]: https://github.com/copyblogger/genesis-sample/compare/2.2.4...2.3.0
-[2.2.4]: https://github.com/copyblogger/genesis-sample/compare/2.2.3...2.2.4
-[2.2.3]: https://github.com/copyblogger/genesis-sample/compare/014deb3689323b7bbd4ddbfff4f5f9279a38f741...2.2.3
+## [1.0.0] - 2018-11-05
+* Added: Initial release

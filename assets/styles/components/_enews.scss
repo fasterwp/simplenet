@@ -1,0 +1,60 @@
+////
+/// Enews component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.enews {
+
+	.before-footer & {
+		transition: $base--transition;
+
+		&:focus,
+		&:hover,
+		&:focus-within {
+			transform: scale(1.05);
+		}
+	}
+
+	form {
+		position: relative;
+		padding: 0;
+	}
+
+	input[type="email"] {
+		width: 100%;
+	}
+
+	input[type="submit"] {
+		margin-top: $spacing--s;
+
+		@include mq(m) {
+			min-height: 5rem;
+			margin-top: 0;
+
+			@include position(absolute, null 0 0 null);
+		}
+	}
+
+	/*
+	.send-icon {
+		display: block;
+		background-image: url("assets/images/paper-plane.svg");
+		background-size: 1em;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-bottom: $spacing--s;
+		pointer-events: none;
+
+		@include size(5rem);
+		@include position(absolute, null 0 0 null);
+
+		@include mq(m) {
+			display: none;
+		}
+	}
+	*/
+}
+

@@ -1,0 +1,91 @@
+////
+/// Content component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.content {
+	z-index: 2;
+	width: 100%;
+
+	@include mq(m) {
+
+		@include margin(null null $spacing--l);
+	}
+
+	.is-singular & {
+		margin-bottom: 0;
+
+		@include mq(m) {
+			margin-bottom: $spacing--l;
+		}
+	}
+
+	.is-archive & {
+		position: relative;
+		margin: -$spacing--xxl + -$spacing--xl + -$spacing--m 0 $spacing--xl;
+		padding: 0 5vw;
+
+		@include grid;
+
+		@include mq(m) {
+			position: relative;
+			margin: -$spacing--xxxl + -$spacing--xl + -$spacing--m auto $spacing--xxl;
+			padding: 0;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		> div {
+
+			@include margin(null auto); // Grid override.
+		}
+	}
+
+	.is-archive.author & {
+		margin-top: -$spacing--xxxl + -$spacing--xl;
+
+		@include mq(m) {
+			margin-top: -$spacing--xxxxl + -$spacing--xl;
+		}
+	}
+
+	.content-sidebar &,
+	.sidebar-content & {
+
+		@include margin(null auto);
+
+		@include mq(m) {
+			width: $layout--width--content;
+
+			@include margin(null 0);
+		}
+	}
+
+	.sidebar-content & {
+
+		@include mq(m) {
+			order: 1;
+		}
+	}
+
+	.center-content & {
+		max-width: $mq-xs;
+
+		@include margin(null auto);
+
+		@include mq(m) {
+			width: $layout--width--content;
+			min-width: $mq-xs;
+		}
+	}
+
+	.front-page &,
+	.page-template-page-full & {
+		margin: 0;
+		padding: 0;
+		background: transparent;
+	}
+}

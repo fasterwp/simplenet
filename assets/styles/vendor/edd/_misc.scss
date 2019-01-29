@@ -1,0 +1,14 @@
+.edd_errors {
+	margin: 0 0 $spacing--l;
+	padding: $spacing--m;
+	border: 1px solid $color--error;
+	border-radius: $base--border--radius;
+	background-color: rgba($color--error, 0.1);
+
+	p {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

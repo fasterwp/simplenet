@@ -1,0 +1,396 @@
+/* ## Gravity Forms
+--------------------------------------------- */
+.gform_heading,
+.gform_body,
+.gform_footer {
+	clear: both;
+}
+
+.gform_heading {
+	padding-bottom: 1em;
+}
+
+.gform_wrapper {
+	border-radius: 6px;
+}
+
+.gform_wrapper .gform_fields {
+	margin: 0 -1rem;
+	padding: 0;
+	list-style: none;
+}
+
+.gform_wrapper .gform_fields li {
+	list-style-type: none;
+}
+
+.gform_wrapper .gfield_checkbox,
+.gform_wrapper .gfield_radio {
+	padding: 0;
+	list-style: none;
+}
+
+.gform_wrapper .gfield_required {
+	padding-left: 0.1em;
+	color: #97a5c1;
+}
+
+.ginput_container {
+	margin-bottom: 2rem;
+}
+
+.ginput_container span {
+	margin-bottom: 1rem;
+}
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+	width: 100%;
+}
+
+.ginput_container input,
+.ginput_container textarea {
+	margin: 0;
+}
+
+.ginput_container input + label {
+	color: #5f749e;
+	font-size: smaller;
+}
+
+.ginput_container select {
+	height: 3em;
+}
+
+.gf_name_has_2,
+.gf_name_has_4 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.name_prefix,
+.name_first,
+.name_middle,
+.name_last,
+.name_suffix {
+	width: 100%;
+}
+
+.name_prefix label,
+.name_first label,
+.name_middle label,
+.name_last label,
+.name_suffix label {
+	font-size: 0.8em;
+}
+
+.gform_title {
+	margin-bottom: 1em;
+	font-weight: 600;
+}
+
+.gfield_label {
+	display: inline-block;
+	font-weight: 600;
+}
+
+.gfield_label:empty {
+	display: none;
+}
+
+.left_label .gfield_label {
+	float: left;
+}
+
+.right_label .gfield_label {
+	float: right;
+}
+
+.gfield_description {
+	margin: 1em 0;
+	font-size: 0.8em;
+}
+
+.gfield_checkbox,
+.gfield_radio {
+	display: flex;
+	overflow: auto;
+	width: 100%;
+	margin: 0 !important;
+	flex-wrap: wrap;
+}
+
+.gfield_checkbox li,
+.gfield_radio li {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	width: 100%;
+	margin: 0.5em 0;
+	font-size: 0.9em;
+}
+
+.gfield_checkbox input,
+.gfield_radio input {
+	display: flex;
+	width: auto;
+	margin-right: 1rem;
+	margin-left: 0.1em;
+	line-height: 1;
+}
+
+.gfield_checkbox label,
+.gfield_radio label {
+	margin-top: 0.1em;
+	margin-bottom: 0;
+	line-height: 1;
+}
+
+.gsection {
+	margin: 1rem 0;
+}
+
+.gsection h2 {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(215, 220, 231, 0.75);
+}
+
+.validation_error,
+.gf_progressbar_wrapper {
+	padding-bottom: 1em;
+}
+
+.gf_progressbar {
+	background: #f7f8fa;
+}
+
+.gf_progressbar_percentage {
+	padding: 0.5rem 1rem;
+	background: #404e6b;
+	text-align: right;
+}
+
+.gfield_time_hour,
+.gfield_time_minute,
+.gfield_time_ampm {
+	display: inline-block;
+}
+
+.gfield_time_hour label,
+.gfield_time_minute label {
+	display: block;
+}
+
+.gfield_time_ampm {
+	vertical-align: top;
+}
+
+.gform_drop_area {
+	display: flex;
+	padding: 2rem;
+	border: 1px solid rgba(215, 220, 231, 0.75);
+	border-radius: 6px;
+	background-color: #ffffff;
+	font-size: small;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gform_drop_area span {
+	display: block;
+	width: 100%;
+	margin-bottom: 1em;
+	line-height: 1;
+	text-align: center;
+}
+
+.gform_drop_area .gform_button_select_files {
+	width: auto;
+	font-size: small;
+}
+
+.ginput_preview {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.ginput_preview img {
+	width: 1.4rem;
+	height: 1.4rem;
+	margin-right: 0.5em;
+	padding: 0.2rem;
+	cursor: pointer;
+}
+
+.gfield {
+	clear: both;
+	overflow: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0 1rem 1.5rem;
+	list-style-type: none;
+}
+
+.gfield .validation_message {
+	margin-top: 1rem;
+}
+
+.gfield li {
+	list-style-type: none;
+}
+
+.validation_error,
+.validation_message {
+	display: block;
+	margin-bottom: 1em;
+	color: #ff5142;
+	font-size: 1.5rem;
+}
+
+.gform_validation_container {
+	display: none;
+}
+
+.gform_footer .gform_button {
+	width: auto;
+}
+
+.ginput_full input,
+.ginput_full select,
+.ginput_full textarea,
+.ginput_left input,
+.ginput_left select,
+.ginput_left textarea,
+.ginput_right input,
+.ginput_right select,
+.ginput_right textarea {
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.ginput_full label,
+.ginput_left label,
+.ginput_right label {
+	display: block;
+}
+
+.ginput_full {
+	display: block;
+}
+
+.gf_left_half,
+.gf_left_third,
+.gf_middle_third,
+.gf_first_quarter,
+.gf_second_quarter {
+	float: left;
+	clear: none;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+}
+
+.gf_right_half,
+.gf_right_third,
+.gf_fourth_quarter {
+	float: right;
+	clear: none;
+	padding-bottom: 1rem;
+}
+
+.gf_third_quarter {
+	float: left;
+	clear: none;
+	padding-bottom: 1rem;
+}
+
+.gf_list_2col li,
+.gf_list_3col li,
+.gf_list_4col li,
+.gf_list_5col li {
+	float: left;
+	padding-bottom: 1rem;
+}
+
+.gf_list_inline li {
+	display: inline-block;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+	.ginput_left {
+		float: left;
+		padding-right: 1rem;
+	}
+	.ginput_right {
+		float: right;
+	}
+	.ginput_container input.large,
+	.ginput_container select.large,
+	.ginput_container textarea.large {
+		width: 100%;
+	}
+	.ginput_container input.medium,
+	.ginput_container select.medium,
+	.ginput_container textarea.medium {
+		width: 66%;
+	}
+	.ginput_container input.small,
+	.ginput_container select.small,
+	.ginput_container textarea.small {
+		width: 33%;
+	}
+	.ginput_container.ginput_container_fileupload input {
+		padding: 32px;
+	}
+	.ginput_container.ginput_container_fileupload input.large {
+		width: 100%;
+	}
+	.ginput_container.ginput_container_fileupload input.medium {
+		width: 100%;
+	}
+	.ginput_container.ginput_container_fileupload input.small {
+		width: 100%;
+	}
+	.name_prefix,
+	.name_first,
+	.name_middle,
+	.name_last,
+	.name_suffix {
+		width: calc((100% - (32px * 1)) / 2 - 0.2px);
+	}
+	.ginput_left,
+	.ginput_right {
+		width: 50%;
+	}
+	.left_label label.gfield_label,
+	.right_label label.gfield_label {
+		width: 25%;
+	}
+	li.gf_left_half,
+	li.gf_right_half,
+	.gf_list_2col li {
+		width: 50%;
+	}
+	li.gf_left_third,
+	li.gf_right_third,
+	.gf_list_3col li {
+		width: 33%;
+	}
+	li.gf_middle_third {
+		width: 34%;
+	}
+	li.gf_first_quarter,
+	li.gf_second_quarter,
+	li.gf_third_quarter,
+	li.gf_fourth_quarter,
+	.gf_list_4col li {
+		width: 25%;
+	}
+	.gf_list_5col li {
+		width: 20%;
+	}
+}

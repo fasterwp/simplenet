@@ -1,0 +1,67 @@
+////
+/// Button.
+///
+/// @group  Base
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+#{$all-buttons} {
+
+	@include button;
+
+	&.small {
+		padding: $spacing--s * $perfect-fourth $spacing--m * $golden;
+		font-size: small;
+	}
+
+	&.large {
+		font-size: large;
+	}
+
+	&.outline {
+		border: 2px $base--border--style $color--primary;
+		color: $color--primary;
+		background: transparent;
+	}
+
+	&.white {
+		color: $color--primary;
+		background: $color--white;
+
+		&.outline {
+			border: 2px $base--border--style $color--white;
+			color: $color--white;
+			background: transparent;
+		}
+	}
+
+	a {
+		color: $color--white;
+		text-decoration: none;
+	}
+
+}
+
+.white,
+.outline {
+
+	a {
+		color: $color--primary;
+
+		@include hover-focus {
+			color: $color--primary;
+		}
+	}
+}
+
+.outline.white {
+
+	a {
+		color: $color--white;
+
+		@include hover-focus {
+			color: $color--white;
+		}
+	}
+}

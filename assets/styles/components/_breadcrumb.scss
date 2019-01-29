@@ -1,0 +1,25 @@
+////
+/// Breadcrumb component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.breadcrumb {
+	display: block;
+	margin: 0 0 $spacing--m;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+
+	.hero-section & {
+		margin: $spacing--m 0 0;
+	}
+
+	// Link wrapper.
+	&-link-wrap {}
+
+	// Breadcrumb separator.
+	&-separator {}
+}

@@ -1,85 +1,100 @@
 <?php
-
-add_action( 'genesis_meta', 'masa_front_page_genesis_meta' );
 /**
- * Add widget support for homepage. If no widgets active, display the default loop.
+ * Startup Pro
  *
- * @since 1.0.0
+ * This file adds the front page template to the child theme.
+ *
+ * @package   SeoThemes\StartupPro
+ * @link      https://seothemes.com/startup-pro
+ * @author    SEO Themes
+ * @copyright Copyright © 2018 SEO Themes
+ * @license   GPL-3.0-or-later
  */
-function masa_front_page_genesis_meta() {
 
-	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' )) {
+// Check if any front page widgets are active.
+if ( 'page' === get_option( 'show_on_front' ) && (
+		is_active_sidebar( 'front-page-1' ) ||
+		is_active_sidebar( 'front-page-2' ) ||
+		is_active_sidebar( 'front-page-3' ) ||
+		is_active_sidebar( 'front-page-4' ) ||
+		is_active_sidebar( 'front-page-5' ) ||
+		is_active_sidebar( 'front-page-6' ) ||
+		is_active_sidebar( 'front-page-7' ) ||
+		is_active_sidebar( 'front-page-8' ) ||
+		is_active_sidebar( 'front-page-9' ) ) ) {
 
-		// Enqueue scripts and styles.
-		add_action( 'wp_enqueue_scripts', 'masa_enqueue_front_script_styles', 1 );
+	// Force full-width-content layout.
+	add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
-		// Add front-page body class.
-		add_filter( 'body_class', 'masa_body_class' );
+	// Remove content-sidebar-wrap.
+	add_filter( 'genesis_markup_content-sidebar-wrap', '__return_null' );
 
-		// Force full width content layout.
-		add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+	// Remove default loop.
+	remove_action( 'genesis_loop', 'genesis_do_loop' );
 
-		// Remove breadcrumbs.
-		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+	// Add custom loop.
+	add_action( 'genesis_loop', function () {
+		ob_start();
+		the_custom_header_markup();
+		$custom_header = ob_get_clean();
 
-		// Remove the default Genesis loop.
-		remove_action( 'genesis_loop', 'genesis_do_loop' );
+		genesis_widget_area( 'front-page-1', array(
+			'before' => '<div class="front-page-1 widget-area">' . $custom_header . '<div class="wrap">',
+			'after'  => '</div></div>',
+		) );
+		genesis_widget_area( 'front-page-2', array(
+			'before' => '<div class="front-page-2 widget-area"><div class="wrap">',
+			'after'  => '</div></div>',
+		) );
+		genesis_widget_area( 'front-page-3', array(
+			'before' => '<div class="front-page-3 widget-area"><div class="wrap">',
+			'after'  => '</div></div>',
+		) );
+		genesis_widget_area( 'front-page-4', array(
+			'before' => '<div class="front-page-4 widget-area"><div class="wrap">',
+			'after'  => '</div></div>',
+		) );
+	} );
 
-		// Add front page widgets.
-		add_action( 'genesis_before_loop', 'masa_front_page_widgets' );
+	add_filter( 'body_class', 'startup_front_page_body_class' );
+	/**
+	 * Add front page body class.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array $classes Array of body classes.
+	 *
+	 * @return array
+	 */
+	function startup_front_page_body_class( $classes ) {
+		$classes[] = 'front-page';
+		$classes   = array_diff( $classes, [ 'blog', 'is-archive' ] );
 
+		return $classes;
 	}
 
+} else if ( 'page' === get_option( 'show_on_front' ) ) {
+	add_filter( 'body_class', 'startup_front_page_body_class' );
+	/**
+	 * Add front page body class.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array $classes Array of body classes.
+	 *
+	 * @return array
+	 */
+	function startup_front_page_body_class( $classes ) {
+		$classes[] = 'is-singular';
+
+		return $classes;
+	}
 }
 
-// Define scripts and styles.
-function masa_enqueue_front_script_styles() {
-
-	wp_enqueue_style( 'masa-front-styles', get_stylesheet_directory_uri() . '/style-front.css' );
-
+// Remove default hero section.
+if ( 'page' === get_option( 'show_on_front' ) && is_active_sidebar( 'front-page-1' ) ) {
+	remove_action( 'genesis_meta', 'startup_hero_section_setup' );
 }
 
-// Add front-page body class.
-function masa_body_class( $classes ) {
-
-	$classes[] = 'front-page';
-
-	return $classes;
-
-}
-
-
-// Add markup for front page widgets.
-function masa_front_page_widgets() {
-
-	echo '<h2 class="screen-reader-text">' . __( 'Main Content', 'genesis-sample' ) . '</h2>';
-
-	genesis_widget_area( 'front-page-1', array(
-		'before' => '<div class="front-page-1"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-1' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-	genesis_widget_area( 'front-page-2', array(
-		'before' => '<div class="front-page-2"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-2' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-	genesis_widget_area( 'front-page-3', array(
-		'before' => '<div class="front-page-3"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-3' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-	genesis_widget_area( 'front-page-4', array(
-		'before' => '<div class="front-page-4"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-4' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-	genesis_widget_area( 'front-page-5', array(
-		'before' => '<div class="front-page-5"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-5' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-}
-
-// Run the Genesis loop.
+// Run Genesis.
 genesis();

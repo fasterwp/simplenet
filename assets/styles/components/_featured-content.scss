@@ -1,0 +1,44 @@
+////
+/// Featured content component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.featured-content {
+
+	.widget-wrap {
+
+		@include grid();
+	}
+
+	.widget-title {
+		width: 100%;
+	}
+
+	.entry {
+
+		@include card();
+
+		@include mq(m) {
+
+			@include column(one-third);
+
+			&:nth-of-type(3n + 1) {
+				margin-left: 0;
+			}
+		}
+
+		> a {
+			display: block;
+			width: calc(100% + #{$spacing--l});
+			margin: -#{$spacing--m} -#{$spacing--m} $spacing--m;
+
+			.entry-image {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}

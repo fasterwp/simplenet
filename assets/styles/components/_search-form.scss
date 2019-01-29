@@ -1,0 +1,54 @@
+////
+/// Search form component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.search-form {
+	position: relative;
+
+	&:before {
+		display: block;
+		z-index: 1;
+		opacity: 0.4;
+		background-image: url("assets/images/search-dark.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 1em;
+		content: "";
+		pointer-events: none;
+
+		@include size(calc(#{$spacing--l} + 1em));
+		@include position(absolute, 0 0 0 null);
+	}
+
+	.error404 & {
+		margin-bottom: $spacing--xl;
+	}
+
+	.hero-section & {
+		margin: $spacing--l 0 $spacing--s;
+
+		::placeholder {
+			opacity: 0.5;
+			color: $color--white;
+		}
+
+		&:before {
+			background-image: url("assets/images/search-light.svg");
+		}
+	}
+
+	.has-dark-hero-search-style .hero-section & {
+
+		::placeholder {
+			color: $color--black;
+		}
+
+		&:before {
+			background-image: url("assets/images/search-dark.svg");
+		}
+	}
+}

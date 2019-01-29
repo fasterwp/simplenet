@@ -1,0 +1,43 @@
+.woocommerce-cart,
+.woocommerce-checkout,
+#add_payment_method {
+
+	#payment {
+
+		ul.payment_methods li {
+			list-style-type: none;
+		}
+
+		div.form-row {
+			margin-bottom: 0;
+		}
+	}
+
+	table.cart td.actions .coupon input.input-text {
+		width: auto;
+	}
+
+	.woocommerce-notice {
+		background-color: $color--white;
+	}
+}
+
+.woocommerce {
+
+	a.remove {
+		color: $color--error !important;
+
+		@include hover-focus {
+			color: $color--white !important;
+			background: $color--error;
+		}
+	}
+
+	table.shop_table {
+		border-collapse: collapse;
+
+		th {
+			background-color: $color--gray-10;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+////
+/// Testimonial component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.testimonials-list {
+
+	@include mq(m) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	blockquote {
+		border: 0;
+	}
+
+	li {
+		margin-bottom: $gutter;
+
+		@include mq(m) {
+			width: $one-third;
+		}
+	}
+}
+
+.lSSlideOuter {
+	padding: $spacing--l 0;
+
+	.star {
+		position: relative;
+		margin: 0 0.1em;
+
+		@include size($spacing--s * $golden);
+
+		&:after {
+			display: block;
+			border-radius: 2rem;
+			background: linear-gradient(135deg, rgba($color--white, 0.5) 0%, rgba($color--white, 0) 100%);
+			content: "";
+			filter: grayscale(1);
+
+			@include position(absolute, 0 0 0 0);
+		}
+	}
+
+	blockquote {
+		margin: 0;
+		border: 0;
+		font-size: $base--font-size;
+	}
+
+	img {
+		width: $spacing--xl * $major-third;
+		height: $spacing--xl * $major-third;
+		margin-bottom: $spacing--m * $golden;
+		box-shadow: $base--box-shadow--x $base--box-shadow--y $base--box-shadow--blur $base--box-shadow--spread rgba($color--black, 0.5);
+	}
+
+	h5 {
+		font-size: smaller;
+	}
+
+	.lSPager.lSpg {
+
+		@include mq(m) {
+			padding-top: $spacing--l;
+		}
+
+		> li {
+
+			a {
+				background-color: $color--gray-20;
+			}
+
+			&:hover,
+			&:focus,
+			&.active {
+
+				a {
+					background-color: $color--gray-30;
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}

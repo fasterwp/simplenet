@@ -1,0 +1,55 @@
+////
+/// Before footer component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.before-footer {
+	font-size: smaller;
+
+	@include mq(m) {
+		font-size: 1em;
+		line-height: 1;
+	}
+
+	.wrap {
+		padding: $spacing--xl * $major-third 0 calc((#{$spacing--xl} * #{$major-third}) - #{$gutter});
+		border-bottom: $base--border;
+		border-bottom-color: rgba($color--gray-50, 0.15);
+		align-items: center;
+	}
+
+	.widget {
+		margin-bottom: $spacing--l;
+
+		@include mq($until: m) {
+			width: 100%;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.widget-title {
+		margin-bottom: $spacing--m;
+		color: $color--gray-80;
+		font-size: $font-size--h3;
+
+		@include mq(m) {
+			font-size: $font-size--h2;
+			line-height: 1;
+		}
+	}
+
+	p {
+		color: $color--gray-50;
+		line-height: 1;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+////
+/// Title area component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.title-area {
+	line-height: $line-height--heading;
+	transition: $base--transition;
+
+	@include mq(m) {
+
+		@include padding($spacing--m null);
+	}
+
+	@include hover-focus {
+		transform: scale(1.1);
+	}
+
+	.has-halloween-easter-egg & {
+		display: flex;
+		align-items: center;
+
+		&:before {
+			margin-top: $spacing--xs;
+			margin-right: $spacing--m;
+			font-size: xx-large;
+			content: "👻";
+		}
+	}
+}
+
+// Site title.
+.site-title {
+	margin: 0;
+	font-size: $font-size--h4;
+	font-weight: $font-weight--bold;
+	line-height: 1;
+
+	.wp-custom-logo & {
+
+		@include hide-visually;
+	}
+
+	a {
+		display: block;
+		color: $color--white;
+		text-decoration: none;
+
+		@include hover-focus {
+			text-decoration: none;
+		}
+	}
+}
+
+// Site description.
+.site-description {
+	margin: 0;
+	color: $color--white;
+	font-size: smaller;
+
+	@include hide-visually;
+
+	.has-site-description & {
+
+		@include hide-visually("unhide");
+	}
+}
+
+// Custom logo.
+.custom-logo {
+	width: 100%;
+	max-width: $mq-xxxxs;
+
+	&-link {
+		display: flex;
+		align-items: center;
+	}
+}

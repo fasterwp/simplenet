@@ -1,0 +1,37 @@
+////
+/// Custom variables.
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+////
+/// Buttons map.
+///
+/// Adds to Bourbon buttons list.
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+$all-buttons: append($all-buttons, ".button");
+$all-buttons: append($all-buttons, "a.button");
+
+////
+/// Headings map
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+$all-headings: (
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+);

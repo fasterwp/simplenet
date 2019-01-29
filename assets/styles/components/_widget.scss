@@ -1,0 +1,43 @@
+////
+/// Widget component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.widget {
+	width: 100%;
+	margin-bottom: $spacing--l;
+	position: relative;
+
+	@include mq(m) {
+		margin-bottom: $spacing--xl;
+	}
+
+	// Widget wrapper.
+	&-wrap {}
+
+	// Widget title.
+	&-title {
+		font-size: $font-size--h5;
+	}
+
+	// Featured content widget.
+	.sidebar &.featured-content {
+
+		.entry {
+
+			@include clearfix;
+		}
+
+		.entry-image {
+			max-width: $spacing--xxl;
+		}
+
+		.entry-title {
+			margin-bottom: $spacing--xxs;
+			font-size: $base--font-size;
+		}
+	}
+}

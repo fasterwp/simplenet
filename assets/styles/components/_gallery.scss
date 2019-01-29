@@ -1,0 +1,114 @@
+////
+/// Gallery component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+$gallery_gutter: $spacing--m * $golden;
+
+$gallery-one-half: calc((100% - (#{$gallery_gutter} * 1)) / 2);
+$gallery-one-third: calc((100% - (#{$gallery_gutter} * 2)) / 3);
+$gallery-one-fourth: calc((100% - (#{$gallery_gutter} * 3)) / 4);
+$gallery-one-fifth: calc((100% - (#{$gallery_gutter} * 4)) / 5);
+$gallery-one-sixth: calc((100% - (#{$gallery_gutter} * 5)) / 6);
+$gallery-one-seventh: calc((100% - (#{$gallery_gutter} * 6)) / 7);
+$gallery-one-eighth: calc((100% - (#{$gallery_gutter} * 7)) / 8);
+$gallery-one-ninth: calc((100% - (#{$gallery_gutter} * 8)) / 9);
+$gallery-one-tenth: calc((100% - (#{$gallery_gutter} * 9)) / 10);
+$gallery-one-eleventh: calc((100% - (#{$gallery_gutter} * 10)) / 11);
+$gallery-one-twelfth: calc((100% - (#{$gallery_gutter} * 11)) / 12);
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	// Gallery item.
+	&-item {
+		width: $gallery-one-half;
+		margin-bottom: $gallery_gutter;
+
+		.gallery-columns-1 & {
+			width: 100%;
+		}
+
+		@include mq(m) {
+			margin-left: $gallery_gutter;
+
+			.gallery-columns-1 & {
+				margin-left: 0;
+			}
+
+			.gallery-columns-2 & {
+				width: $gallery-one-half;
+
+				&:nth-of-type(2n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-3 & {
+				width: $gallery-one-third;
+
+				&:nth-of-type(3n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-4 & {
+				width: $gallery-one-fourth;
+
+				&:nth-of-type(4n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-5 & {
+				width: $gallery-one-fifth;
+
+				&:nth-of-type(5n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-6 & {
+				width: $gallery-one-sixth;
+
+				&:nth-of-type(6n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-7 & {
+				width: $gallery-one-seventh;
+
+				&:nth-of-type(7n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-8 & {
+				width: $gallery-one-eighth;
+
+				&:nth-of-type(8n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-9 & {
+				width: $gallery-one-ninth;
+
+				&:nth-of-type(9n + 1) {
+					margin-left: 0;
+				}
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

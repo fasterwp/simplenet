@@ -1,0 +1,229 @@
+////
+/// Gutenberg block component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.wp-block {
+
+	// Audio block.
+	&-audio {}
+
+	// Button block.
+	&-button {
+
+		.wp-block-button__link {
+
+			@include button;
+		}
+	}
+
+	// Categories block.
+	&-categories {
+
+		&-list {}
+
+		&-dropdown {}
+	}
+
+	// Code block.
+	&-code {}
+
+	// Columns block.
+	&-columns {
+
+		@include mq($until: m) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&-column {
+
+		@include mq($until: m) {
+			flex: none;
+			width: 100%;
+		}
+
+		@include mq(m) {
+			margin-left: $gutter;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+	}
+
+	// Cover.
+	&-cover {
+
+	}
+
+	// Cover image block.
+	&-cover-image {
+
+		&.has-parallax {}
+
+		&.has-background-dim {}
+
+		&-text {}
+
+		&.has-left-content {}
+
+		&.has-right-content {}
+
+		&.has-left-content &-text {}
+
+		&.has-right-content &-text {}
+	}
+
+	// Cover text.
+	&-cover-text {
+		position: relative;
+	}
+
+	// Embed block.
+	&-embed {
+
+		@include margin($spacing--m null);
+	}
+
+	// File block.
+	&-file {
+
+		&__button {}
+	}
+
+	// Gallery block.
+	&-gallery {
+
+		@include margin($spacing--m null);
+
+		&.is-cropped {}
+
+		&.columns-1 {}
+
+		&.columns-2 {}
+
+		&.columns-3 {}
+
+		.blocks-gallery-item {}
+
+		&.is-cropped .blocks-gallery-item {}
+
+		.blocks-gallery-item {
+
+			img {
+				align-self: center;
+			}
+		}
+
+		&.columns-1 .blocks-gallery-item {}
+	}
+
+	// Image block.
+	&-image {
+
+		@include margin($spacing--m null);
+
+		.mockup-browser &,
+		.mockup-ipad &,
+		.mockup-laptop & {
+			margin: 0;
+		}
+
+		&.alignleft {
+			margin-right: $spacing--m;
+		}
+
+		&.alignright {
+			margin-left: $spacing--m;
+		}
+
+		&.alignwide {
+			max-width: calc(100% + 10vw);
+
+			@include mq(m) {
+				max-width: 120%;
+			}
+		}
+
+		&.alignfull {
+			max-width: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	// Latest posts block.
+	&-latest-posts {
+
+		&.is-grid {}
+
+		&__post-date {}
+	}
+
+	// Preformatted block.
+	&-preformatted {}
+
+	// Pullquote block.
+	&-pullquote {
+		border-color: $color--gray-60;
+		border-left: 0;
+
+		@include margin($spacing--xl null);
+		@include padding($spacing--m null);
+
+		&.aligncenter {
+
+			@include margin($spacing--xl null);
+		}
+
+		blockquote {
+			margin: 0;
+			border: 0;
+		}
+
+		p {
+			font-size: $font-size--h4;
+		}
+	}
+
+	// Quote block.
+	&-quote {
+
+		&:not(.is-large):not(.is-style-large) {
+			border-color: $color--gray-60;
+		}
+	}
+
+	// Separator block.
+	&-separator {}
+
+	// Subhead block.
+	&-subhead {}
+
+	// Table block.
+	&-table {
+
+		&.alignwide {
+			width: 90vw;
+
+			@include mq(m) {
+				width: $mq-s;
+			}
+		}
+
+		td,
+		th {
+			padding: $spacing--m;
+			border: $base--border;
+		}
+	}
+
+	// Verse block.
+	&-verse {}
+}

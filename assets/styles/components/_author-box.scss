@@ -1,0 +1,98 @@
+////
+/// Author box component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+.author {
+
+	.hero-section {
+
+		h1 {
+			display: none;
+		}
+	}
+}
+
+.author-box {
+	display: flex;
+	width: 100%;
+	padding: $spacing--l;
+	border-radius: $base--border--radius;
+	background-color: $color--gray-10;
+	flex-wrap: wrap;
+	margin-bottom: $spacing--xl;
+
+	@include mq(m) {
+		display: block;
+		padding: $spacing--xl;
+	}
+
+	.author & {
+		display: flex;
+		width: calc(100% + 10vw);
+		max-width: calc(100% + 10vw);
+		margin: $gutter -5vw $gutter * 2;
+		padding: $spacing--xl;
+		border-radius: $base--border--radius;
+		background-color: $color--white;
+		box-shadow: $base--box-shadow--l;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		@include mq(m) {
+			max-width: $mq-s;
+
+			@include margin(null auto);
+		}
+
+		&-title {
+			width: 100%;
+			padding: $spacing--m * $golden 0 $spacing--m;
+			text-align: center;
+		}
+
+		&-content {
+			padding: 0;
+			text-align: center;
+		}
+
+		img {
+			max-width: $spacing--xxxl;
+			margin-top: -$spacing--xxl;
+			box-shadow: $base--box-shadow;
+			box-shadow: 0 $spacing--s $spacing--xl -$spacing--l rgba($color--gray-80, 0.2);
+
+			@include size($spacing--xxl)
+		}
+	}
+
+	// Author box title.
+	&-title {
+		width: 100%;
+		margin: $spacing--m 0;
+
+		@include mq(m) {
+			width: auto;
+			margin:  0 0 $spacing--s;
+		}
+	}
+
+	// Author box content.
+	&-content {
+		font-size: smaller;
+
+		@include mq(m) {
+			padding-left: $spacing--xl + $spacing--m;
+		}
+
+		p {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+////
+/// Custom extends.
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/startup-pro
+////
+
+@mixin heading {
+	margin: 0 0 $spacing--m;
+	font-family: $font-family--heading;
+	font-weight: $font-weight--bold;
+	line-height: $line-height--heading;
+}
+
+@mixin button {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	width: auto;
+	padding: $spacing--m $spacing--l;
+	border: 0;
+	border-radius: $spacing--l;
+	color: $color--white;
+	background-color: $color--white;
+	box-shadow: $base--box-shadow--x $base--box-shadow--y $base--box-shadow--blur $base--box-shadow--spread rgba($color--gray-80, 0.1);
+	font-size: $base--font-size / $minor-second;
+	font-weight: $font-weight--bold;
+	line-height: 1;
+	white-space: normal;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: $base--transition;
+
+	@include gradient;
+
+	@include hover-focus {
+		outline: none;
+		color: $color--white;
+		box-shadow: $base--box-shadow--x $base--box-shadow--y $base--box-shadow--blur $base--box-shadow--spread rgba($color--gray-80, 0.2);
+		text-decoration: none;
+		transform: scale(1.05);
+	}
+
+	&:disabled {
+
+		&,
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+			background-color: $color--gray-50;
+			cursor: not-allowed;
+		}
+	}
+}
