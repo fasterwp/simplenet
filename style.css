@@ -1,10 +1,10 @@
 /*
- * Theme Name: Startup Pro
- * Theme URI: https://seothemes.com/startup-pro/
+ * Theme Name: Simplenet
+ * Theme URI: https://simplenet.io/
  * Author: SEO Themes
  * Author URI: https://seothemes.com
  * Description: Genesis starter theme with a modern development workflow.
- * Version: 1.1.6
+ * Version: 1.1.7
  * License: GPL-3.0-or-later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Tags: one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -210,28 +210,28 @@ body {
 	width: 100vw;
 	height: 100%;
 	margin: 0;
-	color: #404e6b;
+	color: #031b4e;
 	background-color: #ffffff;
-	font-family: karla, hk grotesk, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1.618;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a {
-	color: #404e6b;
+	color: #0073e5;
 	text-decoration: underline;
-	-webkit-text-decoration-color: #7b51ff;
-	        text-decoration-color: #7b51ff;
+	-webkit-text-decoration-color: #0073e5;
+	        text-decoration-color: #0073e5;
 	transition: all 0.25s ease-in-out;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 p {
@@ -315,7 +315,7 @@ pre [type='submit'],
 pre .button,
 pre a.button {
 	margin-bottom: 8px;
-	font-family: karla, hk grotesk, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
 }
 
 h1,
@@ -325,7 +325,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 16px;
-	font-family: karla, hk grotesk, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
 	font-weight: 700;
 	line-height: 1.2944;
 }
@@ -492,8 +492,8 @@ button.outline,
 [type='submit'].outline,
 .button.outline,
 a.button.outline {
-	border: 2px solid #7b51ff;
-	color: #7b51ff;
+	border: 2px solid #031b4e;
+	color: #031b4e;
 	background: transparent;
 }
 
@@ -503,7 +503,7 @@ button.white,
 [type='submit'].white,
 .button.white,
 a.button.white {
-	color: #7b51ff;
+	color: #031b4e;
 	background: #ffffff;
 }
 
@@ -530,7 +530,7 @@ a.button a {
 
 .white a,
 .outline a {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .white a:hover,
@@ -539,7 +539,7 @@ a.button a {
 .outline a:hover,
 .outline a:focus,
 .outline a:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .outline.white a {
@@ -761,7 +761,7 @@ iframe {
 .site-footer a:hover,
 .site-footer a:focus,
 .site-footer a:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .site-footer input[type='email'] {
@@ -919,7 +919,7 @@ iframe {
 	margin: 0;
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	list-style-type: none;
 	flex-wrap: wrap;
@@ -1159,7 +1159,7 @@ iframe {
 
 .sub-menu .menu-item-link {
 	width: 100%;
-	color: #404e6b;
+	color: #0073e5;
 	padding-top: 0;
 	padding-bottom: 0;
 }
@@ -1167,7 +1167,7 @@ iframe {
 .sub-menu .menu-item-link:hover,
 .sub-menu .menu-item-link:focus,
 .sub-menu .menu-item-link:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .sub-menu .sub-menu {
@@ -1215,7 +1215,7 @@ iframe {
 	border-style: solid;
 	height: 0;
 	width: 0;
-	border-color: #404e6b transparent transparent;
+	border-color: #0073e5 transparent transparent;
 	border-width: 0.5rem 0.5rem 0;
 }
 
@@ -1223,7 +1223,7 @@ iframe {
 	border-style: solid;
 	height: 0;
 	width: 0;
-	border-color: transparent transparent #404e6b;
+	border-color: transparent transparent #0073e5;
 	border-width: 0 0.5rem 0.5rem;
 }
 
@@ -1392,7 +1392,7 @@ iframe {
 
 .hero-section .search-form input[type='submit'] {
 	display: none;
-	color: #404e6b;
+	color: #0073e5;
 	background: #f7f8fa;
 	position: absolute;
 	top: 0;
@@ -1425,7 +1425,7 @@ iframe {
 .hero-section a:hover,
 .hero-section a:focus,
 .hero-section a:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .hero-section input {
@@ -1450,7 +1450,7 @@ iframe {
 	max-width: 100%;
 	margin: 32px 0 -208px !important;
 	border-radius: 6px;
-	color: #404e6b;
+	color: #0073e5;
 	box-shadow: 0 16px 32px -16px rgba(64, 78, 107, 0.1), 0 32px 64px -16px rgba(64, 78, 107, 0.1);
 }
 
@@ -2189,7 +2189,7 @@ div.hero-background {
 }
 
 .footer-widgets .widget-title {
-	color: #404e6b;
+	color: #0073e5;
 }
 
 .footer-widget-area {
@@ -2237,7 +2237,7 @@ div.hero-background {
 .footer-widget-area .menu-item-link:hover,
 .footer-widget-area .menu-item-link:focus,
 .footer-widget-area .menu-item-link:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .footer-credits {
@@ -2412,7 +2412,7 @@ div.hero-background {
 
 .front-page-1 .search-form input[type='submit'] {
 	display: none;
-	color: #404e6b;
+	color: #0073e5;
 	background: #f7f8fa;
 	position: absolute;
 	top: 0;
@@ -2445,7 +2445,7 @@ div.hero-background {
 .front-page-1 a:hover,
 .front-page-1 a:focus,
 .front-page-1 a:active {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .front-page-1 input {
@@ -2540,7 +2540,7 @@ div.hero-background {
 
 .front-page-1 .white,
 .front-page-1 a.white {
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 .front-page-2 {
@@ -2884,7 +2884,7 @@ div.hero-background {
 
 .before-footer .widget-title {
 	margin-bottom: 16px;
-	color: #404e6b;
+	color: #0073e5;
 	font-size: 27.648px;
 	font-size: 2.7648rem;
 }
@@ -3041,7 +3041,7 @@ div.hero-background {
 .gs-faq .gs-faq__question:focus,
 .gs-faq .gs-faq__question:active {
 	background-color: #f7f8fa;
-	color: #404e6b;
+	color: #0073e5;
 	box-shadow: inset 0 1px 0 rgba(215, 220, 231, 0.75);
 	-webkit-transform: none;
 	        transform: none;
@@ -3114,7 +3114,7 @@ div.hero-background {
 }
 
 .hero-section .pricing-table {
-	color: #404e6b;
+	color: #0073e5;
 }
 
 .pricing-table > div {
@@ -3303,14 +3303,14 @@ div.hero-background {
 .portfolio-filter a {
 	display: inline-block;
 	margin: 16px;
-	color: #404e6b;
+	color: #0073e5;
 }
 
 .portfolio-filter a:hover,
 .portfolio-filter a:focus,
 .portfolio-filter a.active {
 	outline: none;
-	color: #7b51ff;
+	color: #031b4e;
 }
 
 div[class*='wp-block-atomic'] {
@@ -3681,7 +3681,7 @@ div[class*='wp-block-atomic'] {
 	position: absolute;
 	padding: 8px;
 	color: #ffffff;
-	background-color: #404e6b;
+	background-color: #0073e5;
 	text-decoration: none;
 }
 
@@ -3704,7 +3704,7 @@ div[class*='wp-block-atomic'] {
 }
 
 .has-primary-background-color {
-	background-color: #7b51ff;
+	background-color: #031b4e;
 }
 
 .has-accent-background-color {
@@ -4791,7 +4791,7 @@ div[class*='wp-block-atomic'] {
 	*,
 	*:before,
 	*:after {
-		color: #404e6b !important;
+		color: #0073e5 !important;
 		background: transparent !important;
 		box-shadow: none !important;
 		text-shadow: none !important;

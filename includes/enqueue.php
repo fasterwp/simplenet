@@ -27,7 +27,7 @@ add_action( 'wp_enqueue_scripts', 'startup_enqueue_scripts_styles' );
 function startup_enqueue_scripts_styles() {
 
 	// Load Google Fonts.
-	wp_enqueue_style( CHILD_THEME_HANDLE . '-google-fonts', '//fonts.googleapis.com/css?family=Karla:400,400i,700,700i', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( CHILD_THEME_HANDLE . '-google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i', array(), CHILD_THEME_VERSION );
 
 	// Load WooCommerce styles.
 	if ( class_exists( 'WooCommerce' ) ) {
@@ -89,5 +89,5 @@ function startup_gutenberg_admin_styles() {
 	wp_enqueue_style( CHILD_THEME_HANDLE . '-gutenberg-editor', get_stylesheet_directory_uri() . '/gutenberg-editor.css' );
 
 	// Load custom Google Fonts.
-	wp_enqueue_style( CHILD_THEME_HANDLE . '-gutenberg-google-fonts', '//fonts.googleapis.com/css?family=Karla%3A400%2C400i%2C700%2C700i' );
+//	wp_enqueue_style( CHILD_THEME_HANDLE . '-gutenberg-google-fonts', '//fonts.googleapis.com/css?family=Rubik%3A400%2C400i%2C700%2C700i' );
 }
