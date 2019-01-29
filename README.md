@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Startup Pro
 
 [![WordPress](https://img.shields.io/badge/wordpress-4.9.8%20tested-brightgreen.svg)]() [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/seothemes/startup-pro/blob/master/LICENSE.md)
@@ -185,3 +186,8 @@ Inside your WordPress dashboard, go to Genesis > Theme Settings and configure to
 Inside your WordPress dashboard, go to Appearance > Widgets and configure to your liking.
 Inside your WordPress dashboard, go to Appearance > Customizer and configure to your liking.
 >>>>>>> parent of fa51bee... update readme
+=======
+# Simplenet Theme
+
+forked Masa theme: https://github.com/fasterwp/masa/
+>>>>>>> parent of 221c886... new base - startup pro

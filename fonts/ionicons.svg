@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2018-6-9: Created with FontForge (http://fontforge.org)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20180321 at Sat Jun  9 19:03:09 2018
+ By Andrei Chira
+Copyright (c) 2018, Andrei Chira
+</metadata>
+<defs>
+<font id="Ionicons" horiz-adv-x="384" >
+  <font-face 
+    font-family="Ionicons"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -0 384 384"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+F20E-F4A5"
+  />
+    <missing-glyph />
+    <glyph glyph-name="ion-search" unicode="&#xf21f;" 
+d="M381 61c4 -4 4 -10 0 -14l-43 -44c-2 -2 -5 -3 -8 -3s-5 1 -7 3l-84 86c-25 -15 -52 -23 -80 -23c-87 0 -159 71 -159 159s72 159 159 159s158 -71 158 -159c0 -27 -7 -54 -21 -78zM159 322c-53 0 -97 -43 -97 -97s44 -97 97 -97s96 43 96 97s-43 97 -96 97z" />
+    <glyph glyph-name="ion-ios-close-empty" unicode="&#xf404;" horiz-adv-x="192" 
+d="M180 288l12 -12l-84 -84l84 -84l-12 -12l-84 84l-84 -84l-12 12l84 84l-84 84l12 12l84 -84z" />
+    <glyph glyph-name="ion-navicon" unicode="&#xf20e;" horiz-adv-x="320" 
+d="M0 175v32h320v-32h-320zM0 271v32h320v-32h-320zM0 79v32h320v-32h-320z" />
+    <glyph glyph-name="ion-ios-search" unicode="&#xf4a5;" 
+d="M384 23l-23 -23l-113 113c-26 -21 -60 -33 -96 -33c-84 0 -152 68 -152 152s68 152 152 152s152 -68 152 -152c0 -36 -12 -69 -33 -95zM56 135c26 -26 60 -39 96 -39s70 14 96 40s40 60 40 96s-14 70 -40 96s-60 40 -96 40s-70 -14 -96 -40s-40 -60 -40 -96
+s14 -71 40 -97z" />
+    <glyph glyph-name="ion-ios-arrow-down" unicode="&#xf3d0;" horiz-adv-x="320" 
+d="M301 288l19 -21l-160 -171l-160 171l19 21l141 -150z" />
+    <glyph glyph-name="ion-ios-minus-empty" unicode="&#xf462;" horiz-adv-x="256" 
+d="M256 183h-256v17h256v-17z" />
+    <glyph glyph-name="ion-ios-plus-empty" unicode="&#xf489;" horiz-adv-x="256" 
+d="M256 183h-120v-119h-17v119h-119v17h119v120h17v-120h120v-17z" />
+  </font>
+</defs></svg>
