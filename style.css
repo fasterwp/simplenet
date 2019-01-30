@@ -1398,6 +1398,11 @@ p.entry-meta {
 		width: 100%;
 		z-index: 9999;
 	}
+	
+	.site-header .wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+}
 
 	/* Genesis Menu
 	--------------------------------------------- */
@@ -1480,6 +1485,38 @@ p.entry-meta {
 	.nav-primary .genesis-nav-menu a {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+
+	.menu-item.menu-item-has-children > a > span {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	}
+
+	.menu-item.menu-item-has-children > a > span::after {
+	    /* display: inline-block; */
+	    width: 6px;
+	    height: 6px;
+	    margin-left: 8px;
+	    border-top: 1px solid;
+	    border-right: 1px solid;
+	    content: "";
+	    -webkit-transform: rotate(135deg);
+	    transform: rotate(135deg);
+	}
+
+	.sub-menu .menu-item.menu-item-has-children > a > span {
+	    -webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	    justify-content: space-between;
+	}
+
+	.sub-menu .menu-item.menu-item-has-children > a > span::after {
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
 	}
 
 	/* Site-Inner
