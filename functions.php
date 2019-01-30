@@ -269,7 +269,5 @@ for ( $i = 1; $i <= 5; $i++ ) {
 // Add single post navigation.
 add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
 
-// Add search form shortcode.
-add_shortcode( 'search_form', function () {
-	return get_search_form( false );
-} );
+// Adds image sizes.
+add_image_size( 'blog-featured', 720, 400, true );
