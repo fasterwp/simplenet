@@ -1914,3 +1914,10 @@ p.entry-meta {
         padding: 100px 40% 80px 0;
     }
  }
+
+/* Landing Page */
+
+.landing-page .content  {
+    float: none;
+    width: 100%;
+}
