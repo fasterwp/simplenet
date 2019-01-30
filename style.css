@@ -1115,14 +1115,24 @@ img.alignright,
 }
 
 .sub-menu-toggle::before {
-	display: inline-block;
-	text-rendering: auto;
-	transform: rotate(0);
-	transition: transform 0.25s ease-in-out;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    content: "";
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    text-rendering: auto;
 }
 
 .sub-menu-toggle.activated::before {
-	transform: rotate(180deg);
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
 }
 
 /* Header Menu
@@ -1890,7 +1900,7 @@ p.entry-meta {
 }
 
 .site-inner.front-page .widget-area:nth-child(odd) {
-    background-color: #000;
+    background-color: #f5f7f9;
 }
 
 .site-inner.front-page .widget:last-child {
@@ -1898,7 +1908,7 @@ p.entry-meta {
 }
 
 .front-page-1 {
-    background-image: url(./images/one-one.svg);
+background-image: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;

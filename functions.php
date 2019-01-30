@@ -111,7 +111,7 @@ function genesis_sample_responsive_menu_settings() {
 		'mainMenu'         => __( 'Menu', 'genesis-sample' ),
 		'menuIconClass'    => 'dashicons-before dashicons-menu',
 		'subMenu'          => __( 'Submenu', 'genesis-sample' ),
-		'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
+		'subMenuIconClass' => '',
 		'menuClasses'      => array(
 			'combine' => array(
 				'.nav-primary',
