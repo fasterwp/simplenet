@@ -139,9 +139,6 @@ add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
 // Renames primary and secondary navigation menus.
 add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
 
-// Adds image sizes.
-add_image_size( 'sidebar-featured', 75, 75, true );
-
 // Adds support for after entry widget.
 add_theme_support( 'genesis-after-entry-widget-area' );
 
@@ -151,8 +148,9 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
 
-// Removes secondary sidebar.
+// Removes primary/secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
+unregister_sidebar( 'sidebar' );
 
 // Removes site layouts.
 genesis_unregister_layout( 'content-sidebar-sidebar' );
