@@ -677,14 +677,9 @@ th:first-child {
 	margin-bottom: 10px;
 }
 
-.entry-title {
-	font-size: 30px;
-	margin-bottom: 10px;
-}
-
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
+	color: #212121;
 	text-decoration: none;
 }
 
@@ -1830,16 +1825,6 @@ p.entry-meta {
 
 .content-archive .content p.entry-meta {
     font-size: 14px;
-    font-size: 1.4rem;
-}
-
-.content-archive .content .entry-meta a {
-    color: #333;
-    text-decoration: none;
-}
-
-.content-archive .content .entry-meta a:hover {
-    color: #c3251d;
 }
 
 @media only screen and (max-width: 1023px) {
