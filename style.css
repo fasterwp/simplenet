@@ -154,7 +154,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #444;
+	color: #031b4e;
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 18px;
 	font-weight: 400;
@@ -243,7 +243,7 @@ h6 {
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
-	color: #212121;
+letter-spacing: -0.2px;
 }
 
 h1 {
@@ -1398,7 +1398,7 @@ p.entry-meta {
 		width: 100%;
 		z-index: 9999;
 	}
-	
+
 	.site-header .wrap {
     max-width: 1140px;
     margin: 0 auto;
@@ -1936,7 +1936,7 @@ p.entry-meta {
     padding: 50px 0;
 }
 
-.site-inner.front-page .widget-area:nth-child(odd) {
+.site-inner.front-page .widget-area:nth-child(even) {
     background-color: #f5f7f9;
 }
 
@@ -1945,7 +1945,7 @@ p.entry-meta {
 }
 
 .front-page-1 {
-background-image: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
+		background-image: url(./images/print.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1953,7 +1953,7 @@ background-image: url(./images/one.svg),radial-gradient(ellipse at bottom right,
 }
 
 .front-page-1 h1 {
-	color:#fff;
+	color: #fff;
 }
 
 @media only screen and (min-width:960px) {
