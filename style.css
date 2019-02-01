@@ -182,7 +182,7 @@ a {
 
 a:focus,
 a:hover {
-	color: #333;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -243,7 +243,7 @@ h6 {
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
-letter-spacing: -0.2px;
+	letter-spacing: -0.2px;
 }
 
 h1 {
@@ -260,15 +260,6 @@ h3 {
 
 h4 {
 	font-size: 20px;
-}
-
-.entry-content h3,
-.entry-content h4 {
-	font-weight: 600;
-}
-
-.entry-content h4 {
-	margin-top: 40px;
 }
 
 h5 {
@@ -673,13 +664,13 @@ th:first-child {
 .archive-title,
 .author-box-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 10px;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #212121;
+	color: #031b4e;
 	text-decoration: none;
 }
 
@@ -1832,10 +1823,6 @@ p.entry-meta {
 .content-archive .content .entry {
     margin-bottom: 0;
     padding: 0;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-
     width: 31.25%; /* http://d.pr/i/sVsJRM */
     margin-bottom: 3.125%;
 }
@@ -1858,7 +1845,7 @@ p.entry-meta {
 }
 
 .content-archive .content .entry-content {
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .content-archive .content a.entry-image-link img {

@@ -43,6 +43,7 @@ add_action( 'genesis_entry_header', 'genesis_entry_header_markup_close' );
 
 // Add entry title and entry meta in entry content.
 add_action( 'genesis_entry_content', 'genesis_do_post_title' );
+//add_action( 'genesis_entry_content', 'genesis_do_post_content' );
 add_action( 'genesis_entry_content', 'genesis_post_meta' );
 
 add_filter( 'genesis_post_meta', 'custom_post_meta_filter' );
