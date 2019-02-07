@@ -1650,6 +1650,34 @@ p.entry-meta {
 		width: calc(100% / 3);
 	}
 
+	/* Pricing Page desktop
+--------------------------------------------- */
+
+.pricing-table {
+	background-color: #f4f3f9;
+	clear: both;
+	overflow: hidden;
+	border-radius: 4px;
+	box-shadow: 0 8px 32px rgba(0,0,0,.1), 0 2px 8px rgba(0,0,0,.1);
+	text-align: center;
+}
+
+.pricing-table .one-fourth {
+	border-left: 1px solid #eee;
+	width: 25%;
+	margin-left: 0;
+}
+
+.pricing-table .one-fourth.first {
+	border-left: none;
+}
+
+/* List items */
+.pricing-table ul > li {
+    padding: 5px;
+    text-align: center;
+}
+
 }
 
 /* Print Styles
@@ -1954,4 +1982,49 @@ p.entry-meta {
 .landing-page .content  {
     float: none;
     width: 100%;
+}
+
+/* Pricing Page
+--------------------------------------------- */
+
+/* Style the list */
+.pricing-table ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Pricing header */
+
+.price .grey {
+	padding-bottom: 30px;
+	color: #777;
+}
+
+
+.price .header {
+    font-size: 22px;
+		font-size: 2.2rem;
+		font-weight: 600;
+		padding-top: 30px;
+}
+
+/* List items */
+.pricing-table ul > li {
+		list-style-type: none;
+		font-size: 16px;
+		font-size: 1.6rem;
+}
+
+.price .pay {
+	padding: 40px 0;
+
+}
+
+.pricing-table p {
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 20px;
 }
