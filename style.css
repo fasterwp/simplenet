@@ -1973,6 +1973,18 @@ p.entry-meta {
     width: 100%;
 }
 
+.landing-page .clearfix {
+margin: 40px auto;
+}
+
+.landing-page h2::after {
+	border-bottom: 1px solid #000;
+	content: "";
+	display: block;
+	padding-bottom: 30px;
+	width: 2.5%;
+}
+
 /* Pricing Page
 --------------------------------------------- */
 
