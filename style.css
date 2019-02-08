@@ -1653,29 +1653,18 @@ p.entry-meta {
 	/* Pricing Page desktop
 --------------------------------------------- */
 
-.pricing-table {
-	background-color: #f4f3f9;
-	clear: both;
-	overflow: hidden;
-	border-radius: 4px;
-	box-shadow: 0 8px 32px rgba(0,0,0,.1), 0 2px 8px rgba(0,0,0,.1);
-	text-align: center;
-}
-
 .pricing-table .one-fourth {
-	border-left: 1px solid #eee;
 	width: 25%;
 	margin-left: 0;
 }
 
 .pricing-table .one-fourth.first {
-	border-left: none;
+
 }
 
 /* List items */
 .pricing-table ul > li {
-    padding: 5px;
-    text-align: center;
+
 }
 
 }
@@ -1987,6 +1976,13 @@ p.entry-meta {
 /* Pricing Page
 --------------------------------------------- */
 
+.pricing-table::after {
+	border-bottom: 1px solid #000;
+	content: "";
+	display: block;
+	width: 2.5%;
+}
+
 /* Style the list */
 .pricing-table ul {
     list-style-type: none;
@@ -2005,17 +2001,16 @@ p.entry-meta {
 
 
 .price .header {
-    font-size: 22px;
-		font-size: 2.2rem;
-		font-weight: 600;
+		font-size: 30px;
+		font-weight: 300;
 		padding-top: 30px;
+		letter-spacing: 0.5px;
 }
 
 /* List items */
 .pricing-table ul > li {
 		list-style-type: none;
 		font-size: 16px;
-		font-size: 1.6rem;
 }
 
 .price .pay {
@@ -2025,6 +2020,5 @@ p.entry-meta {
 
 .pricing-table p {
 	font-size: 14px;
-	font-size: 1.4rem;
 	padding: 20px;
 }
