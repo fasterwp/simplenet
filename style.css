@@ -1383,6 +1383,13 @@ p.entry-meta {
 	margin-bottom: 0;
 }
 
+.footer-widgets a {
+	color: rgba(0, 0, 0, 1);
+}
+.footer-widgets a:hover {
+	color: rgba(0, 0, 0, .4);
+}
+
 
 /* Site Footer
 ---------------------------------------------------------------------------- */
@@ -2114,6 +2121,11 @@ margin: 40px auto;
 	display: block;
 	padding-bottom: 30px;
 	width: 2.5%;
+}
+
+.gs-faq__question, .gs-faq__question:hover, .gs-faq__question:active, .gs-faq__question:focus {
+box-shadow: none;
+transform: none;
 }
 
 /* Pricing Page
