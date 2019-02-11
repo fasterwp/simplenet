@@ -904,7 +904,7 @@ img.alignright,
 
 .site-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -912,7 +912,7 @@ img.alignright,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
+	color: #0073e5;
 	text-decoration: none;
 }
 
@@ -1038,6 +1038,8 @@ img.alignright,
 	background-color: transparent;
 	border-width: 0;
 	color: #0073e5;
+	box-shadow: none;
+	transform: translateY(0);
 }
 
 .menu-toggle {
@@ -1931,6 +1933,12 @@ p.entry-meta {
 		color: #fff;
 }
 
+.front-page-1 .button,
+.front-page-1 .button:hover {
+	background-color: #fff;
+	color: #0073e5;
+}
+
 .front-page-2 .widget-title {
 		padding-top: 10px;
 }
@@ -1969,7 +1977,7 @@ p.entry-meta {
 		box-shadow: 0 32px 64px -16px rgba(64, 78, 107, 0.1);
 }
 
- .front-page-4 .widget_media_image:before {
+.front-page-4 .widget_media_image:before {
 display: block;
 z-index: -2;
 opacity: 0.1;
@@ -1991,7 +1999,7 @@ border-radius: 8px;
 }
 
 
- .front-page-4 .widget_media_image:after {
+.front-page-4 .widget_media_image:after {
 display: block;
 z-index: -1;
 background-image: url('./images/blob.svg');
