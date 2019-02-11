@@ -1209,8 +1209,26 @@ p.entry-meta {
 	text-align: center;
 }
 
-.adjacent-entry-pagination {
-	margin-bottom: 0;
+.adjacent-entry-pagination .pagination-previous,
+.adjacent-entry-pagination .pagination-next {
+	padding-bottom: 20px;
+	display: inline-block;
+	float: left;
+	width: 100%;
+	vertical-align: top;
+}
+
+.adjacent-entry-pagination a {
+	color: #031b4e;
+	font-weight: bold;
+}
+
+.adjacent-entry-pagination a:hover {
+	color: #0073e5;
+}
+
+.pagination-next {
+	text-align: left;
 }
 
 .archive-pagination li {
@@ -1218,8 +1236,9 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: #f5f5f5;
-	color: #333;
+	background-color: #e8e8e8;
+	border-radius: 4px;
+	color: #3a3a3a;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -1232,8 +1251,8 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #333;
-	color: #fff;
+	background-color: #d5d5d5;
+	color: #3a3a3a;
 }
 
 /* Entry Comments
@@ -1638,6 +1657,19 @@ p.entry-meta {
 .pricing-table ul > li {
 
 }
+
+/* Pagination desktop
+	--------------------------- */
+
+.adjacent-entry-pagination .pagination-previous,
+.adjacent-entry-pagination .pagination-next {
+	  width: 49%;
+	}
+
+.pagination-next {
+		text-align: right;
+	  float: right;
+	}
 
 }
 
