@@ -684,7 +684,6 @@ th:first-child {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
@@ -2125,6 +2124,16 @@ margin: 40px auto;
 .gs-faq__question, .gs-faq__question:hover, .gs-faq__question:active, .gs-faq__question:focus {
 box-shadow: none;
 transform: none;
+}
+
+.archive-description p::after,
+.taxonomy-archive-description p::after,
+.taxonomy-description p::after {
+	border-bottom: 1px solid #000;
+	content: "";
+	display: block;
+	padding-bottom: 30px;
+	width: 2.5%;
 }
 
 /* Pricing Page
