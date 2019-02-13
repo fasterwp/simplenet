@@ -852,13 +852,25 @@ img.alignright,
 }
 
 .gs-faq__question::after {
-	content: "\f132";
-	font-family: litedashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    content: "";
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    text-rendering: auto;
 	float: right;
 }
 
 .gs-faq__question.gs-faq--expanded::after {
-	content: "\f460";
+	-webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
 }
 
 
