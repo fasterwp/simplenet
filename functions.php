@@ -271,3 +271,10 @@ add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
 
 // Adds image sizes.
 add_image_size( 'blog-featured', 720, 400, true );
+
+//* Disable the superfish script
+add_action( 'wp_enqueue_scripts', 'sp_disable_superfish' );
+function sp_disable_superfish() {
+	wp_deregister_script( 'superfish' );
+	wp_deregister_script( 'superfish-args' );
+}
