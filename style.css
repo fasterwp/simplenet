@@ -2011,8 +2011,8 @@ p.entry-meta {
 	color: #0073e5;
 }
 
-.front-page-2 .widget-title {
-		padding-top: 10px;
+.front-page-2 h2 {
+		font-size: 18px;
 }
 
 .front-page-4 ul li,
