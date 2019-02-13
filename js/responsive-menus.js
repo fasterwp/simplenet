@@ -99,8 +99,8 @@
 			return;
 		}
 
-		var menuIconClass    = typeof genesisMenuParams.menuIconClass !== 'undefined' ? genesisMenuParams.menuIconClass : 'dashicons-before dashicons-menu';
-		var	subMenuIconClass = typeof genesisMenuParams.subMenuIconClass !== 'undefined' ? genesisMenuParams.subMenuIconClass : 'dashicons-before dashicons-arrow-down-alt2';
+		var menuIconClass    = typeof genesisMenuParams.menuIconClass !== 'undefined' ? genesisMenuParams.menuIconClass : 'litedashicons-before litedashicons-menu';
+		var	subMenuIconClass = typeof genesisMenuParams.subMenuIconClass !== 'undefined' ? genesisMenuParams.subMenuIconClass : 'litedashicons-before litedashicons-arrow-down-alt2';
 		var	toggleButtons    = {
 			menu : $( '<button />', {
 					'class' : mainMenuButtonClass,
