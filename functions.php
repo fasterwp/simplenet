@@ -69,7 +69,12 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  */
 function genesis_sample_enqueue_scripts_styles() {
 
-	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_style(
+	    'litedashicons',
+			get_stylesheet_directory_uri() . "/css/litedashicons.css",
+	    array(),
+	    CHILD_THEME_VERSION
+	);
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
@@ -94,10 +99,6 @@ function genesis_sample_enqueue_scripts_styles() {
 		true
 	);
 
-	// Remove default superfish args.
-	wp_deregister_script( 'superfish-args' );
-	wp_dequeue_script( 'superfish-args' );
-
 }
 
 /**
@@ -109,7 +110,7 @@ function genesis_sample_responsive_menu_settings() {
 
 	$settings = array(
 		'mainMenu'         => __( 'Menu', 'genesis-sample' ),
-		'menuIconClass'    => 'dashicons-before dashicons-menu',
+		'menuIconClass'    => 'litedashicons-before litedashicons-menu',
 		'subMenu'          => __( 'Submenu', 'genesis-sample' ),
 		'subMenuIconClass' => '',
 		'menuClasses'      => array(
@@ -277,4 +278,12 @@ add_action( 'wp_enqueue_scripts', 'sp_disable_superfish' );
 function sp_disable_superfish() {
 	wp_deregister_script( 'superfish' );
 	wp_deregister_script( 'superfish-args' );
+}
+
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'sn_dequeue_dashicons' );
+function sn_dequeue_dashicons() {
+	if ( ! is_user_logged_in() ) {
+		wp_deregister_style( 'dashicons' );
+	}
 }
