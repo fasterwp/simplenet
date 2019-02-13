@@ -33,16 +33,8 @@ add_action( 'enqueue_block_editor_assets', 'genesis_sample_block_editor_styles' 
  *
  * @since 2.7.0
  */
-function genesis_sample_block_editor_styles() {
-
-	wp_enqueue_style(
-		'genesis-sample-gutenberg-fonts',
-		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
-		array(),
-		CHILD_THEME_VERSION
-	);
-
-}
+//function genesis_sample_block_editor_styles() {
+//}
 
 add_filter( 'body_class', 'genesis_sample_blocks_body_classes' );
 /**

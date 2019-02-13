@@ -1,6 +1,6 @@
 body {
-	color: #333;
-	font-family: "Source Sans Pro", sans-serif;
+	color: #212121;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -46,8 +46,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Source Sans Pro", sans-serif;
-	font-weight: 400;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
 }
@@ -89,7 +89,7 @@ h6 {
 }
 
 .editor-post-title__block .editor-post-title__input {
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 30px;
 	font-weight: 400;
 	line-height: 1.2;
@@ -264,7 +264,7 @@ p.has-background.light-text a:hover {
 
 .wp-block-image figcaption {
 	color: #666;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 14px;
 	font-style: italic;
 	margin-top: 10px;
@@ -346,7 +346,7 @@ hr.wp-block-separator.is-style-dots {
 ---------------------------------------------------------------------------- */
 
 .ab-block-cta .ab-button {
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-weight: 600;
 }
 
@@ -357,7 +357,7 @@ hr.wp-block-separator.is-style-dots {
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-weight: 600;
 	line-height: 24px;
 	padding: 15px 30px;
