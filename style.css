@@ -781,11 +781,6 @@ img.alignright,
 	margin-bottom: 40px;
 }
 
-.widget p:last-child,
-.widget ul > li:last-of-type {
-	margin-bottom: 0;
-}
-
 .widget ul > li {
 	margin-bottom: 10px;
 }
