@@ -5,7 +5,7 @@ Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: https://www.studiopress.com/
 
-Version: 2.8.4
+Version: 2.8.5
 
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
@@ -76,15 +76,6 @@ Text Domain: genesis-sample
 		- Footer Widgets
 - Print Styles
 */
-
-@font-face {
-    font-family: 'Graphik';
-    src: url('./fonts/Graphik-Semibold-Web.woff2') format('woff2'),
-		 url('./fonts/Graphik-Semibold-Web.eot') format('embedded-opentype'),
-		 url('./fonts/Graphik-Semibold-Web.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Graphik';
@@ -191,7 +182,7 @@ body {
 	background-color: #fff;
 	color: #031b4e;
 	font-family: 'Graphik',-apple-system,system-ui,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
-	font-size: 17px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
@@ -451,7 +442,7 @@ input[type="submit"],
 	color: #fff;
 	cursor: pointer;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	padding: 12px 35px;
 	text-align: center;
 	text-decoration: none;
@@ -585,7 +576,7 @@ th:first-child {
 	color: #333;
 	display: block;
 	font-size: 1em;
-	font-weight: 600;
+	font-weight: 500;
 	height: auto;
 	padding: 15px 23px 14px;
 	text-decoration: none;
@@ -720,7 +711,7 @@ th:first-child {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-	font-weight: 600;
+	font-weight: 500;
 	margin-bottom: 10px;
 }
 
@@ -737,7 +728,7 @@ th:first-child {
 
 .widget-title {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 	margin-bottom: 20px;
 }
 
@@ -795,7 +786,7 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	margin: 0;
 	text-align: center;
 }
@@ -966,7 +957,7 @@ img.alignright,
 
 .site-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -1282,7 +1273,7 @@ p.entry-meta {
 
 .adjacent-entry-pagination a {
 	color: #031b4e;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .adjacent-entry-pagination a:hover {
@@ -1377,7 +1368,7 @@ p.entry-meta {
 }
 .comment-author {
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 500;
 }
 .says {
     display: none;
@@ -1480,14 +1471,14 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-bold > a {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
 		background-color: #333;
 		border-radius: 3px;
 		color: #fff;
-		font-weight: 600;
+		font-weight: 500;
 		margin-left: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -1992,7 +1983,7 @@ p.entry-meta {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .articles {
         flex-direction: column;
         -ms-grid-columns: 1fr;
@@ -2077,7 +2068,7 @@ p.entry-meta {
 		color: #fff;
 		background-color: #007aff;
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 500;
 		content: counter(counter);
 		align-items: center;
 		justify-content: center;
