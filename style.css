@@ -5,7 +5,7 @@ Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: https://www.studiopress.com/
 
-Version: 2.8.6
+Version: 2.8.7
 
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
@@ -76,33 +76,6 @@ Text Domain: genesis-sample
 		- Footer Widgets
 - Print Styles
 */
-
-@font-face {
-    font-family: 'Graphik';
-    src: url('./fonts/Graphik-Medium-Web.woff2') format('woff2'),
-		 url('./fonts/Graphik-Medium-Web.eot') format('embedded-opentype'),
-		 url('./fonts/Graphik-Medium-Web.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Graphik';
-    src: url('./fonts/Graphik-Regular-Web.woff2') format('woff2'),
-		 url('./fonts/Graphik-Regular-Web.eot') format('embedded-opentype'),
-		  url('./fonts/Graphik-Regular-Web.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Graphik';
-    src: url('./fonts/Graphik-RegularItalic-Web.woff2') format('woff2'),
-		 url('./fonts/Graphik-RegularItalic-Web.eot') format('embedded-opentype'),
-		  url('./fonts/Graphik-RegularItalic-Web.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-}
 
 /* HTML5 Reset
 ---------------------------------------------------------------------------- */
@@ -181,8 +154,8 @@ html {
 body {
 	background-color: #fff;
 	color: #031b4e;
-	font-family: 'Graphik',-apple-system,system-ui,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
-	font-size: 17px;
+	font-family: 'Nunito Sans',-apple-system,system-ui,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
@@ -238,7 +211,7 @@ hr {
 
 b,
 strong {
-	font-weight: 500;
+	font-weight: 700;
 }
 
 blockquote,
@@ -266,10 +239,11 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Graphik',-apple-system,system-ui,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
-	font-weight: 500;
+	font-family: 'Nunito Sans',-apple-system,system-ui,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
+	letter-spacing: -0.1px;
 }
 
 h1 {
@@ -442,7 +416,7 @@ input[type="submit"],
 	color: #fff;
 	cursor: pointer;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 600;
 	padding: 12px 35px;
 	text-align: center;
 	text-decoration: none;
@@ -576,7 +550,7 @@ th:first-child {
 	color: #333;
 	display: block;
 	font-size: 1em;
-	font-weight: 500;
+	font-weight: 600;
 	height: auto;
 	padding: 15px 23px 14px;
 	text-decoration: none;
@@ -711,7 +685,7 @@ th:first-child {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 10px;
 }
 
@@ -728,7 +702,7 @@ th:first-child {
 
 .widget-title {
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
@@ -786,7 +760,7 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 600;
 	margin: 0;
 	text-align: center;
 }
@@ -957,7 +931,7 @@ img.alignright,
 
 .site-title {
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -1273,7 +1247,7 @@ p.entry-meta {
 
 .adjacent-entry-pagination a {
 	color: #031b4e;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .adjacent-entry-pagination a:hover {
@@ -1368,7 +1342,7 @@ p.entry-meta {
 }
 .comment-author {
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 600;
 }
 .says {
     display: none;
@@ -1471,14 +1445,14 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-bold > a {
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
 		background-color: #333;
 		border-radius: 3px;
 		color: #fff;
-		font-weight: 500;
+		font-weight: 600;
 		margin-left: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -2068,7 +2042,7 @@ p.entry-meta {
 		color: #fff;
 		background-color: #007aff;
 		font-size: 1rem;
-		font-weight: 500;
+		font-weight: 600;
 		content: counter(counter);
 		align-items: center;
 		justify-content: center;
