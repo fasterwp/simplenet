@@ -16,7 +16,7 @@ require_once get_template_directory() . '/lib/init.php';
 // Defines the child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'Simplenet' );
 define( 'CHILD_THEME_URL', 'https://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.8.7' );
+define( 'CHILD_THEME_VERSION', '2.8.1' );
 
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
@@ -68,13 +68,6 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  * @since 1.0.0
  */
 function genesis_sample_enqueue_scripts_styles() {
-
-	wp_enqueue_style(
-		'google-fonts',
-		'//fonts.googleapis.com/css?family=Nunito+Sans:400,400i,600,700&display=swap&subset=latin-ext',
-		array(),
-		CHILD_THEME_VERSION
-	);
 
 	wp_enqueue_style(
 	    'litedashicons',
