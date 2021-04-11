@@ -69,7 +69,7 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  */
 function genesis_sample_enqueue_scripts_styles() {
 
-	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap', array(), PARENT_THEME_VERSION );
+	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;1,400&display=swap', array(), PARENT_THEME_VERSION );
 
 	wp_enqueue_style(
 	    'litedashicons',
