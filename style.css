@@ -144,54 +144,6 @@ html {
 /* Defaults
 ---------------------------------------------------------------------------- */
 
-@font-face {
-    font-family: 'basier_circleregular';
-    src: url('./fonts/basiercircle-regular-webfont.eot');
-    src: url('./fonts/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/basiercircle-regular-webfont.woff2') format('woff2'),
-         url('./fonts/basiercircle-regular-webfont.woff') format('woff'),
-         url('./fonts/basiercircle-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'basier_squareregular';
-    src: url('./fonts/basiersquare-regular-webfont.eot');
-    src: url('./fonts/basiersquare-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/basiersquare-regular-webfont.woff2') format('woff2'),
-         url('./fonts/basiersquare-regular-webfont.woff') format('woff'),
-         url('./fonts/basiersquare-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'silkaregular';
-    src: url('./fonts/silka-regular-webfont.eot');
-    src: url('./fonts/silka-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/silka-regular-webfont.woff2') format('woff2'),
-         url('./fonts/silka-regular-webfont.woff') format('woff'),
-         url('./fonts/silka-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'silkaitalic';
-    src: url('./fonts/silka-regularitalic-webfont.eot');
-    src: url('./fonts/silka-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/silka-regularitalic-webfont.woff2') format('woff2'),
-         url('./fonts/silka-regularitalic-webfont.woff') format('woff'),
-         url('./fonts/silka-regularitalic-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 /* Typographical Elements
 --------------------------------------------- */
@@ -203,14 +155,13 @@ html {
 
 body {
 	background-color: #fff;
-	color: #031b4e;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-	font-size: 17px;
+	color: #5b6987;
+	font-family: 'Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue','Helvetica','Arial','sans-serif';
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
 	overflow-x: hidden;
-	letter-spacing: -0.2px;
 }
 
 button,
@@ -289,17 +240,21 @@ h3,
 h4,
 h5,
 h6 {
+	color:#031b4e;
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
+	
 }
 
 h1 {
 	font-size: 42px;
+	letter-spacing: -1px;
 }
 
 h2 {
 	font-size: 27px;
+	letter-spacing: -1px;
 }
 
 h3 {
