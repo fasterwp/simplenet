@@ -155,7 +155,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #5b6987;
+	color:#031b4e;
 	font-family: 'Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue','Helvetica','Arial','sans-serif';
 	font-size: 16px;
 	font-weight: 400;
@@ -240,7 +240,6 @@ h3,
 h4,
 h5,
 h6 {
-	color:#031b4e;
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
