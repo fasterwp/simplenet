@@ -156,6 +156,18 @@ html {
 
 }
 
+@font-face {
+    font-family: 'basier_squareregular';
+    src: url('./fonts/basiersquare-regular-webfont.eot');
+    src: url('./fonts/basiersquare-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/basiersquare-regular-webfont.woff2') format('woff2'),
+         url('./fonts/basiersquare-regular-webfont.woff') format('woff'),
+         url('./fonts/basiersquare-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* Typographical Elements
 --------------------------------------------- */
 
@@ -167,7 +179,7 @@ html {
 body {
 	background-color: #fff;
 	color: #031b4e;
-	font-family: 'basier_circleregular', 'Avenir Next', Arial, sans-serif;
+	font-family: 'basier_squareregular', 'Avenir Next', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.625;
