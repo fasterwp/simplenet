@@ -144,6 +144,18 @@ html {
 /* Defaults
 ---------------------------------------------------------------------------- */
 
+@font-face {
+    font-family: 'basier_circleregular';
+    src: url('./fonts/basiercircle-regular-webfont.eot');
+    src: url('./fonts/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/basiercircle-regular-webfont.woff2') format('woff2'),
+         url('./fonts/basiercircle-regular-webfont.woff') format('woff'),
+         url('./fonts/basiercircle-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* Typographical Elements
 --------------------------------------------- */
 
@@ -155,7 +167,7 @@ html {
 body {
 	background-color: #fff;
 	color: #031b4e;
-	font-family: 'Noto Sans', 'Avenir Next', Arial, sans-serif;
+	font-family: 'basier_circleregular', 'Avenir Next', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.625;
