@@ -19,10 +19,10 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_css' );
  */
 function genesis_sample_css() {
 
-	$handle = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
+	$appearance = genesis_get_config( 'appearance' );
 
-	$color_link   = get_theme_mod( 'genesis_sample_link_color', genesis_sample_customizer_get_default_link_color() );
-	$color_accent = get_theme_mod( 'genesis_sample_accent_color', genesis_sample_customizer_get_default_accent_color() );
+	$color_link   = get_theme_mod( 'genesis_sample_link_color', $appearance['default-colors']['link'] );
+	$color_accent = get_theme_mod( 'genesis_sample_accent_color', $appearance['default-colors']['accent'] );
 	$logo         = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
 	if ( $logo ) {
@@ -36,7 +36,7 @@ function genesis_sample_css() {
 
 	$css = '';
 
-	$css .= ( genesis_sample_customizer_get_default_link_color() !== $color_link ) ? sprintf(
+	$css .= ( $appearance['default-colors']['link'] !== $color_link ) ? sprintf(
 		'
 
 		a,
@@ -58,7 +58,7 @@ function genesis_sample_css() {
 		$color_link
 	) : '';
 
-	$css .= ( genesis_sample_customizer_get_default_accent_color() !== $color_accent ) ? sprintf(
+	$css .= ( $appearance['default-colors']['accent'] !== $color_accent ) ? sprintf(
 		'
 
 		button:focus,
@@ -73,6 +73,10 @@ function genesis_sample_css() {
 		input[type="reset"]:hover,
 		input[type="submit"]:focus,
 		input[type="submit"]:hover,
+		.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:focus,
+		.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:hover,
+		.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
+		.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 		.button:focus,
 		.button:hover {
 			background-color: %1$s;
@@ -99,6 +103,18 @@ function genesis_sample_css() {
 		}
 		'
 	: '';
+
+	if ( ! is_customize_preview() ) {
+		$css .= has_custom_logo() ? sprintf(
+			'
+		.wp-custom-logo .site-container .custom-logo-link {
+			aspect-ratio: %1$s/%2$s;
+		}
+		',
+			$logo_max_width,
+			$logo_effective_height
+		) : '';
+	}
 
 	$css .= ( has_custom_logo() && ( 350 !== $logo_max_width ) ) ? sprintf(
 		'
@@ -145,7 +161,7 @@ function genesis_sample_css() {
 	) : '';
 
 	if ( $css ) {
-		wp_add_inline_style( $handle, $css );
+		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}
 
 }
