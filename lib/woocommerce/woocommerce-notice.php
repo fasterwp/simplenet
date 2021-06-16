@@ -52,7 +52,7 @@ function genesis_sample_woocommerce_theme_notice() {
 	}
 
 	/* translators: %s: child theme name */
-	$notice_html = sprintf( __( 'Please install and activate <a href="https://wordpress.org/plugins/genesis-connect-woocommerce/" target="_blank">Genesis Connect for WooCommerce</a> to <strong>enable WooCommerce support for %s</strong>.', 'genesis-sample' ), wp_get_theme()->get( 'Name' ) );
+	$notice_html = sprintf( __( 'Please install and activate <a href="https://wordpress.org/plugins/genesis-connect-woocommerce/" target="_blank">Genesis Connect for WooCommerce</a> to <strong>enable WooCommerce support for %s</strong>.', 'genesis-sample' ), esc_html( CHILD_THEME_NAME ) );
 
 	if ( current_user_can( 'install_plugins' ) ) {
 		$plugin_slug  = 'genesis-connect-woocommerce';
@@ -61,10 +61,10 @@ function genesis_sample_woocommerce_theme_notice() {
 			'<a href="%s">%s</a>',
 			wp_nonce_url(
 				add_query_arg(
-					[
+					array(
 						'action' => 'install-plugin',
 						'plugin' => $plugin_slug,
-					],
+					),
 					$admin_url
 				),
 				'install-plugin_' . $plugin_slug
@@ -73,7 +73,7 @@ function genesis_sample_woocommerce_theme_notice() {
 		);
 
 		/* translators: 1: plugin install prompt presented as link, 2: child theme name */
-		$notice_html = sprintf( __( 'Please %1$s to <strong>enable WooCommerce support for %2$s</strong>.', 'genesis-sample' ), $install_link, wp_get_theme()->get( 'Name' ) );
+		$notice_html = sprintf( __( 'Please %1$s to <strong>enable WooCommerce support for %2$s</strong>.', 'genesis-sample' ), $install_link, esc_html( CHILD_THEME_NAME ) );
 	}
 
 	echo '<div class="notice notice-info is-dismissible genesis-sample-woocommerce-notice"><p>' . wp_kses_post( $notice_html ) . '</p></div>';
@@ -100,7 +100,7 @@ add_action( 'admin_enqueue_scripts', 'genesis_sample_notice_script' );
  */
 function genesis_sample_notice_script() {
 
-	wp_enqueue_script( 'genesis_sample_notice_script', get_stylesheet_directory_uri() . '/lib/woocommerce/js/notice-update.js', [ 'jquery' ], '1.0', true );
+	wp_enqueue_script( 'genesis_sample_notice_script', get_stylesheet_directory_uri() . '/lib/woocommerce/js/notice-update.js', array( 'jquery' ), '1.0', true );
 
 }
 
@@ -114,10 +114,10 @@ function genesis_sample_reset_woocommerce_notice() {
 
 	global $wpdb;
 
-	$args  = [
-		'meta_key'   => $wpdb->prefix . 'genesis_sample_woocommerce_message_dismissed', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-		'meta_value' => 1, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
-	];
+	$args  = array(
+		'meta_key'   => $wpdb->prefix . 'genesis_sample_woocommerce_message_dismissed',
+		'meta_value' => 1,
+	);
 	$users = get_users( $args );
 
 	foreach ( $users as $user ) {

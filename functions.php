@@ -13,6 +13,11 @@
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
+// Defines the child theme (do not remove).
+define( 'CHILD_THEME_NAME', 'Simplenet' );
+define( 'CHILD_THEME_URL', 'https://www.studiopress.com/' );
+define( 'CHILD_THEME_VERSION', '2.8.1' );
+
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 
@@ -24,7 +29,7 @@ add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
  */
 function genesis_sample_localization_setup() {
 
-	load_child_theme_textdomain( genesis_get_theme_handle(), get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'genesis-sample', get_stylesheet_directory() . '/languages' );
 
 }
 
@@ -56,11 +61,6 @@ function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingCon
 	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
 }
 
-// Registers the responsive menus.
-if ( function_exists( 'genesis_register_responsive_menus' ) ) {
-	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
-}
-
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
  * Enqueues scripts and styles.
@@ -69,143 +69,135 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  */
 function genesis_sample_enqueue_scripts_styles() {
 
-	$appearance = genesis_get_config( 'appearance' );
+	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap', array(), PARENT_THEME_VERSION );
 
-	wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- see https://core.trac.wordpress.org/ticket/49742
-		genesis_get_theme_handle() . '-fonts',
-		$appearance['fonts-url'],
-		[],
-		null
+	wp_enqueue_style(
+	    'litedashicons',
+			get_stylesheet_directory_uri() . "/css/litedashicons.css",
+	    array(),
+	    CHILD_THEME_VERSION
 	);
 
-	wp_enqueue_style( 'dashicons' );
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	wp_enqueue_script(
+		'genesis-sample-responsive-menu',
+		get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js",
+		array( 'jquery' ),
+		CHILD_THEME_VERSION,
+		true
+	);
 
-	if ( genesis_is_amp() ) {
-		wp_enqueue_style(
-			genesis_get_theme_handle() . '-amp',
-			get_stylesheet_directory_uri() . '/lib/amp/amp.css',
-			[ genesis_get_theme_handle() ],
-			genesis_get_theme_version()
-		);
-	}
+	wp_localize_script(
+		'genesis-sample-responsive-menu',
+		'genesis_responsive_menu',
+		genesis_sample_responsive_menu_settings()
+	);
+
+	wp_enqueue_script(
+		'genesis-sample',
+		get_stylesheet_directory_uri() . '/js/genesis-sample.js',
+		array( 'jquery' ),
+		CHILD_THEME_VERSION,
+		true
+	);
 
 }
 
-add_filter( 'body_class', 'genesis_sample_body_classes' );
 /**
- * Add additional classes to the body element.
+ * Defines responsive menu settings.
  *
- * @since 3.4.1
- *
- * @param array $classes Classes array.
- * @return array $classes Updated class array.
+ * @since 2.3.0
  */
-function genesis_sample_body_classes( $classes ) {
+function genesis_sample_responsive_menu_settings() {
 
-	if ( ! genesis_is_amp() ) {
-		// Add 'no-js' class to the body class values.
-		$classes[] = 'no-js';
-	}
-	return $classes;
-}
+	$settings = array(
+		'mainMenu'         => __( 'Menu', 'genesis-sample' ),
+		'menuIconClass'    => 'litedashicons-before litedashicons-menu',
+		'subMenu'          => __( 'Submenu', 'genesis-sample' ),
+		'subMenuIconClass' => '',
+		'menuClasses'      => array(
+			'combine' => array(
+				'.nav-primary',
+			),
+			'others'  => array(),
+		),
+	);
 
-add_action( 'genesis_before', 'genesis_sample_js_nojs_script', 1 );
-/**
- * Echo the script that changes 'no-js' class to 'js'.
- *
- * @since 3.4.1
- */
-function genesis_sample_js_nojs_script() {
-
-	if ( genesis_is_amp() ) {
-		return;
-	}
-
-	?>
-	<script>
-	//<![CDATA[
-	(function(){
-		var c = document.body.classList;
-		c.remove( 'no-js' );
-		c.add( 'js' );
-	})();
-	//]]>
-	</script>
-	<?php
-}
-
-add_filter( 'wp_resource_hints', 'genesis_sample_resource_hints', 10, 2 );
-/**
- * Add preconnect for Google Fonts.
- *
- * @since 3.4.1
- *
- * @param array  $urls          URLs to print for resource hints.
- * @param string $relation_type The relation type the URLs are printed.
- * @return array URLs to print for resource hints.
- */
-function genesis_sample_resource_hints( $urls, $relation_type ) {
-
-	if ( wp_style_is( genesis_get_theme_handle() . '-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
-		$urls[] = [
-			'href' => 'https://fonts.gstatic.com',
-			'crossorigin',
-		];
-	}
-
-	return $urls;
-}
-
-add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
-/**
- * Add desired theme supports.
- *
- * See config file at `config/theme-supports.php`.
- *
- * @since 3.0.0
- */
-function genesis_sample_theme_support() {
-
-	$theme_supports = genesis_get_config( 'theme-supports' );
-
-	foreach ( $theme_supports as $feature => $args ) {
-		add_theme_support( $feature, $args );
-	}
+	return $settings;
 
 }
 
-add_action( 'after_setup_theme', 'genesis_sample_post_type_support', 9 );
-/**
- * Add desired post type supports.
- *
- * See config file at `config/post-type-supports.php`.
- *
- * @since 3.0.0
- */
-function genesis_sample_post_type_support() {
+// Adds support for HTML5 markup structure.
+add_theme_support( 'html5', genesis_get_config( 'html5' ) );
 
-	$post_type_supports = genesis_get_config( 'post-type-supports' );
+// Adds support for accessibility.
+add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
 
-	foreach ( $post_type_supports as $post_type => $args ) {
-		add_post_type_support( $post_type, $args );
-	}
+// Adds viewport meta tag for mobile browsers.
+add_theme_support( 'genesis-responsive-viewport' );
 
-}
+// Adds custom logo in Customizer > Site Identity.
+add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
 
-// Adds image sizes.
-add_image_size( 'sidebar-featured', 75, 75, true );
-add_image_size( 'genesis-singular-images', 702, 526, true );
+// Renames primary and secondary navigation menus.
+add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
+
+// Adds support for after entry widget.
+add_theme_support( 'genesis-after-entry-widget-area' );
+
+// Adds support for 3-column footer widgets.
+add_theme_support( 'genesis-footer-widgets', 3 );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
 
-// Removes secondary sidebar.
+// Removes primary/secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
+unregister_sidebar( 'sidebar' );
 
 // Removes site layouts.
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+// Removes output of primary navigation right extras.
+remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
+remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
+
+add_action( 'genesis_theme_settings_metaboxes', 'genesis_sample_remove_metaboxes' );
+/**
+ * Removes output of unused admin settings metaboxes.
+ *
+ * @since 2.6.0
+ *
+ * @param string $_genesis_admin_settings The admin screen to remove meta boxes from.
+ */
+function genesis_sample_remove_metaboxes( $_genesis_admin_settings ) {
+
+	remove_meta_box( 'genesis-theme-settings-header', $_genesis_admin_settings, 'main' );
+	remove_meta_box( 'genesis-theme-settings-nav', $_genesis_admin_settings, 'main' );
+
+}
+
+add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_remove_customizer_settings' );
+/**
+ * Removes output of header and front page breadcrumb settings in the Customizer.
+ *
+ * @since 2.6.0
+ *
+ * @param array $config Original Customizer items.
+ * @return array Filtered Customizer items.
+ */
+function genesis_sample_remove_customizer_settings( $config ) {
+
+	unset( $config['genesis']['sections']['genesis_header'] );
+	unset( $config['genesis']['sections']['genesis_breadcrumbs']['controls']['breadcrumb_front_page'] );
+	return $config;
+
+}
+
+// Displays custom logo.
+add_action( 'genesis_site_title', 'the_custom_logo', 0 );
 
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -226,10 +218,11 @@ add_filter( 'wp_nav_menu_args', 'genesis_sample_secondary_menu_args' );
  */
 function genesis_sample_secondary_menu_args( $args ) {
 
-	if ( 'secondary' === $args['theme_location'] ) {
-		$args['depth'] = 1;
+	if ( 'secondary' !== $args['theme_location'] ) {
+		return $args;
 	}
 
+	$args['depth'] = 1;
 	return $args;
 
 }
@@ -263,4 +256,29 @@ function genesis_sample_comments_gravatar( $args ) {
 	$args['avatar_size'] = 60;
 	return $args;
 
+}
+
+// Registers front-page widget areas.
+for ( $i = 1; $i <= 5; $i++ ) {
+    genesis_register_widget_area(
+        array(
+            'id'          => "front-page-{$i}",
+            'name'        => __( "Front Page {$i}", 'genesis-sample' ),
+            'description' => __( "This is the front page {$i} section.", 'genesis-sample' ),
+        )
+    );
+}
+
+// Add single post navigation.
+add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
+
+// Adds image sizes.
+add_image_size( 'blog-featured', 720, 400, true );
+
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'sn_dequeue_dashicons' );
+function sn_dequeue_dashicons() {
+	if ( ! is_user_logged_in() ) {
+		wp_deregister_style( 'dashicons' );
+	}
 }
