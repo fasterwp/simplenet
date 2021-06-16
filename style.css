@@ -1,6 +1,6 @@
 /*
-Theme Name: andreichira
-Theme URI: https://andreichira.ro/
+Theme Name: simplenet
+Theme URI: https://simplenet.io/
 Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: https://www.studiopress.com/
@@ -159,7 +159,7 @@ html {
 body {
 	background-color: #fff;
 	color: #111;
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: 'Inter', Helvetica,Arial,sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -179,14 +179,14 @@ textarea:focus,
 }
 
 a {
-	color: #06c;
+	color: #0073e5;
 	text-decoration: none;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: #06c;
+	color:#000;
 	text-decoration: none;
 }
 
@@ -216,7 +216,7 @@ hr {
 
 b,
 strong {
-	font-weight: 700;
+	font-family: 700;
 }
 
 blockquote,
@@ -265,11 +265,6 @@ h3 {
 
 h4 {
 	font-size: 20px;
-}
-
-.entry-content h3,
-.entry-content h4 {
-	font-weight: 600;
 }
 
 .entry-content h4 {
@@ -421,13 +416,12 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: #111;
+	background-color: #007aff;
 	border: 0;
 	border-radius: 4px;
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
-	font-weight: 600;
 	padding: 12px 35px;
 	text-align: center;
 	text-decoration: none;
@@ -449,7 +443,7 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #06c;
+	background-color: #0073e5;
 	border-width: 0;
 	color: #fff;
 }
@@ -470,8 +464,8 @@ input[type="reset"].secondary,
 input[type="submit"].secondary,
 .comment-reply-link {
 	background: transparent;
-	border: 1px solid #06c;
-	color: #06c;
+	border: 1px solid #0073e5;
+	color: #0073e5;
 	border-radius: 4px;
 	padding: 6px 18px;
 	font-size: 16px;
@@ -715,7 +709,7 @@ th {
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #06c;
+	color: #0073e5;
 }
 
 .widget-title {
@@ -898,7 +892,7 @@ figcaption,
 ---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #000;
+	background-color: #fff;
 	padding: 0 30px;
 }
 
@@ -928,7 +922,7 @@ figcaption,
 
 .site-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1;
 	margin-bottom: 0;
 
@@ -937,7 +931,7 @@ figcaption,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #fff;
+	color: #0073e5;
 	text-decoration: none;
 }
 
@@ -969,7 +963,7 @@ figcaption,
 }
 
 .genesis-nav-menu a {
-	color: #fff;
+	color: #111;
 	display: block;
 	font-size: 15px;
 	font-weight: 400;
@@ -984,7 +978,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #06c;
+	color: #0073e5;
 	text-decoration: none;
 }
 
@@ -1005,7 +999,7 @@ figcaption,
 }
 
 .genesis-nav-menu .sub-menu a {
-	background-color: #000;
+	background-color: #fff;
 	font-size: 14px;
 	position: relative;
 	word-wrap: break-word;
@@ -1048,7 +1042,7 @@ figcaption,
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: #fff;
+	color: #111;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1062,7 +1056,7 @@ figcaption,
 .sub-menu-toggle:hover {
 	background-color: transparent;
 	border-width: 0;
-	color: #fff;
+	color: #0073e5;
 }
 
 .menu-toggle {
@@ -1460,10 +1454,9 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
-		background-color: #111;
+		background-color: #fff;
 		border-radius: 3px;
-		color: #fff;
-		font-weight: 600;
+		color: #111;
 		margin-left: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -1471,7 +1464,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #06c;
+		background-color: #0073e5;
 	}
 
 	.genesis-nav-menu .sub-menu,
