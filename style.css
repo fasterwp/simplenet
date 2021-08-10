@@ -247,19 +247,22 @@ h6 {
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
-	letter-spacing: -0.8px;
 }
 
 h1 {
 	font-size: 30px;
+	font-weight: 800;
+	letter-spacing: -0.5px;
 }
 
 h2 {
 	font-size: 27px;
+	letter-spacing: -0.3px;
 }
 
 h3 {
 	font-size: 24px;
+	letter-spacing: -0.2px;
 }
 
 h4 {
