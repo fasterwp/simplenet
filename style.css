@@ -177,7 +177,7 @@ textarea:focus,
 }
 
 a {
-	color: #0073e5;
+	color: #007AFF;
 	text-decoration: none;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
@@ -445,7 +445,7 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #0073e5;
+	background-color: #007AFF;
 	border-width: 0;
 	color: #fff;
 }
@@ -466,8 +466,8 @@ input[type="reset"].secondary,
 input[type="submit"].secondary,
 .comment-reply-link {
 	background: transparent;
-	border: 1px solid #0073e5;
-	color: #0073e5;
+	border: 1px solid #007AFF;
+	color: #007AFF;
 	border-radius: 4px;
 	padding: 6px 18px;
 	font-size: 16px;
@@ -525,7 +525,7 @@ tr {
 }
 
 th {
-	font-weight: 600;
+	font-weight: 700;
 	padding: 0.5em;
 }
 
@@ -694,7 +694,7 @@ th {
 .archive-title,
 .author-box-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 10px;
 }
 
@@ -711,12 +711,12 @@ th {
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #0073e5;
+	color: #007AFF;
 }
 
 .widget-title {
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -782,7 +782,7 @@ figcaption,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-top: 0.5em;
 	margin-bottom: 1em;
 	padding-left: 10px;
@@ -933,7 +933,7 @@ figcaption,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #0073e5;
+	color: #007AFF;
 	text-decoration: none;
 }
 
@@ -980,7 +980,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+	color: #007AFF;
 	text-decoration: none;
 }
 
@@ -1058,7 +1058,7 @@ figcaption,
 .sub-menu-toggle:hover {
 	background-color: transparent;
 	border-width: 0;
-	color: #0073e5;
+	color: #007AFF;
 }
 
 .menu-toggle {
@@ -1182,11 +1182,11 @@ figcaption,
 }
 
 .entry-content code {
-	background-color: #f5f5f5;
+	background-color: #f5f7f9;
 }
 
 .content .sticky {
-	background-color: #f5f5f5;
+	background-color: #f5f7f9;
 	padding: 30px;
 }
 
@@ -1249,7 +1249,7 @@ p.entry-meta {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 4px;
 	padding: 8px 12px;
 	text-decoration: none;
@@ -1318,7 +1318,7 @@ p.entry-meta {
 }
 .comment-author {
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 700;
 }
 .says {
     display: none;
@@ -1469,7 +1469,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #0073e5;
+		background-color: #007AFF;
 	}
 
 	.genesis-nav-menu .sub-menu,
@@ -1564,7 +1564,7 @@ p.entry-meta {
 	--------------------------------------------- */
 
 	.author-box {
-		background-color: #f5f5f5;
+		background-color: #f5f7f9;
 		padding: 30px;
 	}
 
