@@ -264,46 +264,5 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
-
-//remove_theme_support( 'wc-product-gallery-zoom' );
-remove_theme_support( 'wc-product-gallery-lightbox' );
-remove_theme_support( 'wc-product-gallery-slider' );
-
-// Register `home-featured` widget area.
-genesis_register_widget_area(
-	array(
-		'id'          => 'home-featured',
-		'name'        => __( 'Home Featured', 'genesis-sample' ),
-		'description' => __( 'This is the home featured section.', 'genesis-sample' ),
-	)
-);
-
-add_action( 'genesis_before_loop', 'custom_home_featured' );
-/**
- * Display `home-featured` widget area below the header.
- */
-function custom_home_featured() {
-	// if this is not the front page, abort.
-	if ( ! is_front_page() ) {
-		return;
-	}
-
-	genesis_widget_area( 'home-featured', array(
-		'before' => '<div class="home-featured widget-area"><div class="wrap">',
-		'after'  => '</div></div>',
-	) );
-}
-// Force full content layout on product category, product tag archives and all single products
-add_action( 'get_header', 'sk_force_layout' );
-function sk_force_layout() {
-
-	if ( is_tax( 'product_cat' ) || is_tax( 'product_tag' ) || is_singular( 'product' ) ) {
-		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-	}
-
-}
-/** Disable Ajax Call from WooCommerce on front page and posts*/
-add_action( 'wp_enqueue_scripts', 'dequeue_woocommerce_cart_fragments', 11);
-function dequeue_woocommerce_cart_fragments() {
-if (is_front_page() || is_single() ) wp_dequeue_script('wc-cart-fragments');
-}
+//* Enable the block-based widget editor
+add_filter( 'use_widgets_block_editor', '__return_true' );
