@@ -1349,7 +1349,7 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #f0f0f0;
+	background-color: #f5f7f9;
 	clear: both;
 	font-size: 16px;
 	padding: 60px 0;
@@ -1371,20 +1371,12 @@ p.entry-meta {
 	margin-bottom: 0;
 }
 
-.footer-widgets a {
-	border-bottom: 1px solid rgba(0, 0, 0, 1);
-	color: rgba(0, 0, 0, 1);
-}
-.footer-widgets a:hover {
-	border-bottom: 1px solid rgba(0, 0, 0, .4);
-	color: rgba(0, 0, 0, .4);
-}
 
 /* Site Footer
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #f5f7f9;
+
 	color: #555;
 	font-size: 15px;
 	line-height: 1.5;
