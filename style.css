@@ -1161,6 +1161,7 @@ figcaption,
 .entry-content ul {
 	margin-bottom: 30px;
 	padding-left: 40px;
+	font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
 }
 
 .entry-content ol > li {
