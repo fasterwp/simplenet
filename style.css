@@ -1376,7 +1376,6 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-
 	color: #555;
 	font-size: 15px;
 	line-height: 1.5;
@@ -1386,19 +1385,6 @@ p.entry-meta {
 
 .site-footer p {
 	margin-bottom: 0;
-}
-
-.site-footer a {
-	color: #333;
-	text-decoration: none;
-}
-.site-footer a:hover {
-	color: #000;
-	text-decoration: none;
-}
-
-.home-featured {
-	margin-bottom: 40px;
 }
 
 /* Media Queries
