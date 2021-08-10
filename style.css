@@ -1381,8 +1381,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #000;
-	color: rgba(255, 255, 255, 0.87);
+	background-color: #f5f7f9;
+	color: #555;
 	font-size: 15px;
 	line-height: 1.5;
 	padding: 30px;
@@ -1394,11 +1394,11 @@ p.entry-meta {
 }
 
 .site-footer a {
-	color: rgba(255, 255, 255, 0.87);
+	color: #333;
 	text-decoration: none;
 }
 .site-footer a:hover {
-	color: #fff;
+	color: #000;
 	text-decoration: none;
 }
 
