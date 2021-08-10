@@ -1153,6 +1153,9 @@ figcaption,
 	margin-bottom: 40px;
 }
 
+.entry-content p {
+	font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
+}
 
 .entry-content ol,
 .entry-content ul {
