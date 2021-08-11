@@ -1191,6 +1191,10 @@ figcaption,
 	padding: 30px;
 }
 
+.entry-image-link {
+	padding-bottom: 2rem;
+}
+
 /* Entry Meta
 --------------------------------------------- */
 
