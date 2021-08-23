@@ -156,7 +156,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #111;
+	color: #333;
 	font-family: 'Inter', Helvetica,Arial,sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -252,17 +252,17 @@ h6 {
 h1 {
 	font-size: 30px;
 	font-weight: 800;
-	letter-spacing: -0.5px;
+	letter-spacing: -0.4px;
 }
 
 h2 {
 	font-size: 27px;
-	letter-spacing: -0.3px;
+	letter-spacing: -0.2px;
 }
 
 h3 {
 	font-size: 24px;
-	letter-spacing: -0.2px;
+	letter-spacing: -0.1px;
 }
 
 h4 {
@@ -965,10 +965,10 @@ figcaption,
 }
 
 .genesis-nav-menu a {
-	color: #111;
+	color: #000;
 	display: block;
 	font-size: 15px;
-	font-weight: 400;
+	font-weight: 700;
 	outline-offset: -1px;
 	padding-bottom: 12px;
 	padding-top: 12px;
