@@ -250,13 +250,13 @@ h6 {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 32px;
 	font-weight: 800;
 	letter-spacing: -0.4px;
 }
 
 h2 {
-	font-size: 27px;
+	font-size: 28px;
 	letter-spacing: -0.2px;
 }
 
@@ -1397,6 +1397,12 @@ p.entry-meta {
 }
 
 @media only screen and (min-width: 960px) {
+
+	h1 {
+		font-size: 48px;
+		font-weight: 800;
+		letter-spacing: -0.4px;
+	}
 
 	/* Site Header
 	--------------------------------------------- */
