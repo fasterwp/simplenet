@@ -163,6 +163,7 @@ body {
 	line-height: 1.625;
 	margin: 0;
 	overflow-x: hidden;
+	letter-spacing: -0.25px;
 }
 
 button,
@@ -243,7 +244,6 @@ h4,
 h5,
 h6 {
 	color:#000;
-	font-family: 'Inter', Helvetica, Arial,sans-serif;
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -256,13 +256,11 @@ h1 {
 }
 
 h2 {
-	font-size: 27px;
-	letter-spacing: -0.2px;
+	font-size: 24px;
 }
 
 h3 {
-	font-size: 24px;
-	letter-spacing: -0.1px;
+	font-size: 20px;
 }
 
 h4 {
@@ -416,6 +414,7 @@ input[type="submit"],
 .button {
 	font-weight: 500;
 	background-color: #007aff;
+	border-radius: 3px;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -594,6 +593,11 @@ th {
 	clear: both;
 	margin: 0 auto;
 	padding: 60px 30px 0;
+}
+
+.wp-block-group.alignfull {
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 
@@ -1150,14 +1154,12 @@ figcaption,
 }
 
 .entry-content p {
-	font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
 }
 
 .entry-content ol,
 .entry-content ul {
 	margin-bottom: 30px;
 	padding-left: 40px;
-	font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
 }
 
 .entry-content ol > li {
