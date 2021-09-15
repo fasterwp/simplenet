@@ -1792,3 +1792,12 @@ p.entry-meta {
 .group-cta {
 	text-align: center;
 }
+
+.gb-button-size-medium, input[type="submit"].gb-button-size-medium {
+	font-weight: 500;
+	background-color: #0073e5;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 25px;
+}
