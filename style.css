@@ -251,7 +251,6 @@ h6 {
 h1 {
 	font-size: 32px;
 	font-weight: 800;
-	letter-spacing: -0.4px;
 }
 
 h2 {
@@ -715,7 +714,7 @@ th {
 
 .widget-title {
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 500;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -1401,7 +1400,6 @@ p.entry-meta {
 	h1 {
 		font-size: 48px;
 		font-weight: 800;
-		letter-spacing: -0.4px;
 	}
 
 	/* Site Header
