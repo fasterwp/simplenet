@@ -27,7 +27,7 @@ $genesis_sample_link_color_contrast   = genesis_sample_color_contrast( $genesis_
 $genesis_sample_link_color_brightness = genesis_sample_color_brightness( $genesis_sample_link_color, 35 );
 
 return [
-	'fonts-url'            => 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap',
+	'fonts-url'            => '',
 	'content-width'        => 1062,
 	'button-bg'            => $genesis_sample_link_color,
 	'button-color'         => $genesis_sample_link_color_contrast,
