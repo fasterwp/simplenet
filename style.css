@@ -5,7 +5,7 @@ Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: https://www.studiopress.com/
 
-Version: 3.4.3
+Version: 3.4.4
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -78,6 +78,65 @@ Requires PHP: 5.6
 		- Footer Widgets
 - Print Styles
 */
+
+
+
+/**
+ * @license
+ *
+ * Font Family: Satoshi
+ * Designed by: Deni Anggara
+ * URL: https://www.fontshare.com/fonts/satoshi
+ * © 2021 Indian Type Foundry
+ *
+ * Font Styles:
+ * Satoshi Variable(Variable font)
+ * Satoshi Variable Italic(Variable font)
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+	font-family: 'Satoshi-Variable';
+	src: url('./fonts/Satoshi-Variable.woff2') format('woff2'),
+		 url('./fonts/Satoshi-Variable.woff') format('woff'),
+		 url('./fonts/Satoshi-Variable.ttf') format('truetype');
+		 font-weight: 300 900;
+		 font-display: swap;
+		 font-style: normal;
+  }
+  
+  
+  /**
+  * This is a variable font
+  * You can controll variable axes as shown below:
+  * font-variation-settings: 'wght' 900.0;
+  *
+  * available axes:
+  
+  * 'wght' (range from 300.0 to 900.0)
+  
+  */
+  
+  @font-face {
+	font-family: 'Satoshi-VariableItalic';
+	src: url('./fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+		 url('./fonts/Satoshi-VariableItalic.woff') format('woff'),
+		 url('./fonts/Satoshi-VariableItalic.ttf') format('truetype');
+		 font-weight: 300 900;
+		 font-display: swap;
+		 font-style: italic;
+  }
 
 
 /* HTML5 Reset
@@ -156,8 +215,8 @@ html {
 
 body {
 	background-color: #fff;
-	color: #333;
-	font-family: 'Satoshi',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	color: #212121;
+	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -221,6 +280,7 @@ blockquote,
 cite,
 em,
 i {
+	font-family: 'Satoshi-VariableItalic',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-style: italic;
 }
 
@@ -1399,7 +1459,7 @@ p.entry-meta {
 
 	h1 {
 		font-size: 48px;
-		font-weight: 1000;
+		font-weight: 900;
 	}
 
 	.menu-item.menu-item-has-children > a > span {
