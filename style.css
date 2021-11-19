@@ -757,7 +757,9 @@ th {
 }
 
 .entry-title {
-	font-size: 3rem;
+	font-size: 32px;
+	color:#000;
+	font-weight: 900;
 	margin-bottom: 20px;
 }
 
@@ -1457,9 +1459,8 @@ p.entry-meta {
 
 @media only screen and (min-width: 960px) {
 
-	h1 {
+	h1, .entry-title {
 		font-size: 48px;
-		font-weight: 900;
 	}
 
 	.menu-item.menu-item-has-children > a > span {
