@@ -506,7 +506,7 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	font-weight: 500;
+	font-weight: 700;
 	background-color: #007aff;
 	border-radius: 3px;
 	border: 0;
@@ -793,15 +793,16 @@ th {
 }
 
 .entry-title {
+	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 32px;
-	color:#000;
+	color:#1B1642;
 	font-weight: 900;
 	margin-bottom: 20px;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #111;
+	color: #1B1642;
 	text-decoration: none;
 }
 
@@ -812,7 +813,7 @@ th {
 
 .widget-title {
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 700;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -1920,7 +1921,7 @@ p.entry-meta {
 }
 
 .gb-button-size-medium, input[type="submit"].gb-button-size-medium {
-	font-weight: 500;
+	font-weight: 700;
 	background-color: #0073e5;
 	border-radius: 3px;
 	color: #fff;
