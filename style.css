@@ -250,7 +250,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #212121;
+	color: #575A7B;
 	font-family: 'DM Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: 420;
@@ -339,7 +339,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-	color:#000;
+	color:#1B1642;
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
