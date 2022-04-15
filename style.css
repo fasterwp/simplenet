@@ -138,6 +138,41 @@ Requires PHP: 5.6
 		 font-style: italic;
   }
 
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Regular.eot');
+    src: local('DM Sans Regular'), local('DMSans-Regular'),
+        url('./fonts/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/DMSans-Regular.woff2') format('woff2'),
+        url('./fonts/DMSans-Regular.woff') format('woff'),
+        url('./fonts/DMSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Italic.eot');
+    src: local('DM Sans Italic'), local('DMSans-Italic'),
+        url('./fonts/DMSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/DMSans-Italic.woff2') format('woff2'),
+        url('./fonts/DMSans-Italic.woff') format('woff'),
+        url('./fonts/DMSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Bold.eot');
+    src: local('DM Sans Bold'), local('DMSans-Bold'),
+        url('./fonts/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/DMSans-Bold.woff2') format('woff2'),
+        url('./fonts/DMSans-Bold.woff') format('woff'),
+        url('./fonts/DMSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 /* HTML5 Reset
 ---------------------------------------------------------------------------- */
@@ -216,12 +251,13 @@ html {
 body {
 	background-color: #fff;
 	color: #212121;
-	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	font-family: 'DM Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: 420;
 	line-height: 1.625;
 	margin: 0;
 	overflow-x: hidden;
+	letter-spacing: -0.004em;
 }
 
 button,
@@ -280,7 +316,7 @@ blockquote,
 cite,
 em,
 i {
-	font-family: 'Satoshi-VariableItalic',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
 	font-style: italic;
 }
 
@@ -302,6 +338,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	color:#000;
 	font-weight: 700;
 	line-height: 1.2;
