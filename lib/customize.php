@@ -103,8 +103,8 @@ function genesis_sample_validate_logo_width( $validity, $width ) {
 
 	if ( empty( $width ) || ! is_numeric( $width ) ) {
 		$validity->add( 'required', __( 'You must supply a valid number.', 'genesis-sample' ) );
-	} elseif ( $width < 100 ) {
-		$validity->add( 'logo_too_small', __( 'The logo width cannot be less than 100.', 'genesis-sample' ) );
+	} elseif ( $width < 20 ) {
+		$validity->add( 'logo_too_small', __( 'The logo width cannot be less than 20.', 'genesis-sample' ) );
 	}
 
 	return $validity;
