@@ -79,102 +79,14 @@ Requires PHP: 5.6
 - Print Styles
 */
 
-
-
-/**
- * @license
- *
- * Font Family: Satoshi
- * Designed by: Deni Anggara
- * URL: https://www.fontshare.com/fonts/satoshi
- * © 2021 Indian Type Foundry
- *
- * Font Styles:
- * Satoshi Variable(Variable font)
- * Satoshi Variable Italic(Variable font)
-*/
-
-
-/**
-* This is a variable font
-* You can controll variable axes as shown below:
-* font-variation-settings: 'wght' 900.0;
-*
-* available axes:
-
-* 'wght' (range from 300.0 to 900.0)
-
-*/
-
 @font-face {
-	font-family: 'Satoshi-Variable';
-	src: url('./fonts/Satoshi-Variable.woff2') format('woff2'),
-		 url('./fonts/Satoshi-Variable.woff') format('woff'),
-		 url('./fonts/Satoshi-Variable.ttf') format('truetype');
+	font-family: 'Inter';
+	src: url('./fonts/Inter-roman.var.woff2') format('woff2');
 		 font-weight: 300 900;
 		 font-display: swap;
 		 font-style: normal;
   }
-  
-  
-  /**
-  * This is a variable font
-  * You can controll variable axes as shown below:
-  * font-variation-settings: 'wght' 900.0;
-  *
-  * available axes:
-  
-  * 'wght' (range from 300.0 to 900.0)
-  
-  */
-  
-  @font-face {
-	font-family: 'Satoshi-VariableItalic';
-	src: url('./fonts/Satoshi-VariableItalic.woff2') format('woff2'),
-		 url('./fonts/Satoshi-VariableItalic.woff') format('woff'),
-		 url('./fonts/Satoshi-VariableItalic.ttf') format('truetype');
-		 font-weight: 300 900;
-		 font-display: swap;
-		 font-style: italic;
-  }
 
-@font-face {
-    font-family: 'DM Sans';
-    src: url('DMSans-Regular.eot');
-    src: local('DM Sans Regular'), local('DMSans-Regular'),
-        url('./fonts/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/DMSans-Regular.woff2') format('woff2'),
-        url('./fonts/DMSans-Regular.woff') format('woff'),
-        url('./fonts/DMSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'DM Sans';
-    src: url('DMSans-Italic.eot');
-    src: local('DM Sans Italic'), local('DMSans-Italic'),
-        url('./fonts/DMSans-Italic.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/DMSans-Italic.woff2') format('woff2'),
-        url('./fonts/DMSans-Italic.woff') format('woff'),
-        url('./fonts/DMSans-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-font-display: swap;
-}
-
-@font-face {
-    font-family: 'DM Sans';
-    src: url('DMSans-Bold.eot');
-    src: local('DM Sans Bold'), local('DMSans-Bold'),
-        url('./fonts/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/DMSans-Bold.woff2') format('woff2'),
-        url('./fonts/DMSans-Bold.woff') format('woff'),
-        url('./fonts/DMSans-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-font-display: swap;
-}
 
 /* HTML5 Reset
 ---------------------------------------------------------------------------- */
@@ -254,7 +166,7 @@ html {
 body {
 	background-color: #fff;
 	color: #575A7B;
-	font-family: 'DM Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	font-family: 'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -347,9 +259,8 @@ h6 {
 }
 
 h1 {
-	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 32px;
-	font-weight: 900;
+	font-weight: 600;
 }
 
 h2 {
@@ -799,7 +710,7 @@ th {
 	font-family: 'Satoshi-Variable',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 32px;
 	color:#1B1642;
-	font-weight: 900;
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
